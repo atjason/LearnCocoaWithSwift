@@ -28,8 +28,8 @@ Answered by:
                     row: Int) -> AnyObject?`
 
 # Tables, Cells, and Views
-**TODO**: Figure 7.8  Object types within a Text Table Cell View
-![](../Binding the value of the text field.jpg)
+
+![Object types within a Text Table Cell View](./images/./Binding the value of the text field.jpg)
 
 ## Table cell views
 
@@ -44,13 +44,9 @@ You can also create custom table cell views.
 
 ## Workflow to Get Data from DataSource and Display in TableView
 
+![Binding the value of the text field](./images/Object types within a Text Table Cell View.jpg)
+
 - When the table view asks for data to display in a particular cell, the data source returns an **object**.
 - The table view sets this object to the **objectValue of the table cell view**.
 - **Note**: Setting the objectValue of the table cell view will not affect what the table actually displays. The table displays the value of the text field (or other control) of the table cell view. This means you must do a little more work to ensure that the value of the text field is updated when the objectValue of the table cell view is set. Could do it using Cocoa bindings.
 - **Bind** the **value** of each text field to the **objectValue of its table cell view**.
-
-**TODO**: Figure 7.11  Binding the value of the text field
-
-
-
-
