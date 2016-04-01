@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96F13ECA1CAE35F60050E30B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F13EC91CAE35F60050E30B /* AppDelegate.swift */; };
+		96F13ECC1CAE35F60050E30B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F13ECB1CAE35F60050E30B /* Assets.xcassets */; };
+		96F13ECF1CAE35F60050E30B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F13ECD1CAE35F60050E30B /* MainMenu.xib */; };
+		96F13ED71CAE36030050E30B /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F13ED61CAE36030050E30B /* MainWindowController.swift */; };
+		96F13ED91CAE36100050E30B /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F13ED81CAE360F0050E30B /* MainWindowController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96F13EC61CAE35F60050E30B /* VoiceList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F13EC91CAE35F60050E30B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96F13ECB1CAE35F60050E30B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96F13ECE1CAE35F60050E30B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		96F13ED01CAE35F60050E30B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96F13ED61CAE36030050E30B /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		96F13ED81CAE360F0050E30B /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96F13EC31CAE35F60050E30B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96F13EBD1CAE35F60050E30B = {
+			isa = PBXGroup;
+			children = (
+				96F13EC81CAE35F60050E30B /* VoiceList */,
+				96F13EC71CAE35F60050E30B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96F13EC71CAE35F60050E30B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96F13EC61CAE35F60050E30B /* VoiceList.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96F13EC81CAE35F60050E30B /* VoiceList */ = {
+			isa = PBXGroup;
+			children = (
+				96F13EC91CAE35F60050E30B /* AppDelegate.swift */,
+				96F13ECB1CAE35F60050E30B /* Assets.xcassets */,
+				96F13ECD1CAE35F60050E30B /* MainMenu.xib */,
+				96F13ED01CAE35F60050E30B /* Info.plist */,
+				96F13ED61CAE36030050E30B /* MainWindowController.swift */,
+				96F13ED81CAE360F0050E30B /* MainWindowController.xib */,
+			);
+			path = VoiceList;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96F13EC51CAE35F60050E30B /* VoiceList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96F13ED31CAE35F60050E30B /* Build configuration list for PBXNativeTarget "VoiceList" */;
+			buildPhases = (
+				96F13EC21CAE35F60050E30B /* Sources */,
+				96F13EC31CAE35F60050E30B /* Frameworks */,
+				96F13EC41CAE35F60050E30B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoiceList;
+			productName = VoiceList;
+			productReference = 96F13EC61CAE35F60050E30B /* VoiceList.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96F13EBE1CAE35F60050E30B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jason Zheng";
+				TargetAttributes = {
+					96F13EC51CAE35F60050E30B = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 96F13EC11CAE35F60050E30B /* Build configuration list for PBXProject "VoiceList" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96F13EBD1CAE35F60050E30B;
+			productRefGroup = 96F13EC71CAE35F60050E30B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96F13EC51CAE35F60050E30B /* VoiceList */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96F13EC41CAE35F60050E30B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F13ECC1CAE35F60050E30B /* Assets.xcassets in Resources */,
+				96F13ED91CAE36100050E30B /* MainWindowController.xib in Resources */,
+				96F13ECF1CAE35F60050E30B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96F13EC21CAE35F60050E30B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F13ED71CAE36030050E30B /* MainWindowController.swift in Sources */,
+				96F13ECA1CAE35F60050E30B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96F13ECD1CAE35F60050E30B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96F13ECE1CAE35F60050E30B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96F13ED11CAE35F60050E30B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96F13ED21CAE35F60050E30B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		96F13ED41CAE35F60050E30B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VoiceList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atjason.swift.cocoa.VoiceList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96F13ED51CAE35F60050E30B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VoiceList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atjason.swift.cocoa.VoiceList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96F13EC11CAE35F60050E30B /* Build configuration list for PBXProject "VoiceList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F13ED11CAE35F60050E30B /* Debug */,
+				96F13ED21CAE35F60050E30B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96F13ED31CAE35F60050E30B /* Build configuration list for PBXNativeTarget "VoiceList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F13ED41CAE35F60050E30B /* Debug */,
+				96F13ED51CAE35F60050E30B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96F13EBE1CAE35F60050E30B /* Project object */;
+}
