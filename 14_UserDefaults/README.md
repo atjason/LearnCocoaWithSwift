@@ -100,6 +100,7 @@ defaults read com.apple.dt.Xcode
 #NSUserDefaultsController
 An NSUserDefaultsController could be used to bind to a value from the NSUserDefaults object to UI values. All the NIBs in your application will use a single shared instance of NSUserDefaultsController.
 For example, if you wanted to use bindings to deal with SpeakLine’s text field, you would bind it to the shared NSUserDefaultsController with a Controller Key of values and a Model Key Path of activeTextKey.
+
 ![](./_image/Bind user defaults.jpg)
 #How much data can reasonably store in NSUserDefaults
 No, there is no size limit to NSUserDefaults, aside from the storage capacity of the device itself.
