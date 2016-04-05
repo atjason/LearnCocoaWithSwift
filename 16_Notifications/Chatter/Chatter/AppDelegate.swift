@@ -16,7 +16,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   // MARK: - lifecycle
   
   func applicationDidFinishLaunching(aNotification: NSNotification) {
-    NSValueTransformer.setValueTransformer(IsNotEmptyTransformer(), forName: "IsNotEmptyTransformer")
     addWindowController()
   }
   

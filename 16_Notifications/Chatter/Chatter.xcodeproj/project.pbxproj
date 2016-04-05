@@ -12,7 +12,6 @@
 		96A3CEF71CB3664C00C99C3A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A3CEF51CB3664C00C99C3A /* MainMenu.xib */; };
 		96A3CF001CB3666300C99C3A /* ChatWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A3CEFE1CB3666300C99C3A /* ChatWindowController.swift */; };
 		96A3CF011CB3666300C99C3A /* ChatWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A3CEFF1CB3666300C99C3A /* ChatWindowController.xib */; };
-		96A3CF051CB37B6900C99C3A /* IsNotEmptyTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A3CF041CB37B6900C99C3A /* IsNotEmptyTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		96A3CEF81CB3664C00C99C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96A3CEFE1CB3666300C99C3A /* ChatWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatWindowController.swift; sourceTree = "<group>"; };
 		96A3CEFF1CB3666300C99C3A /* ChatWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatWindowController.xib; sourceTree = "<group>"; };
-		96A3CF041CB37B6900C99C3A /* IsNotEmptyTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsNotEmptyTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				96A3CEF81CB3664C00C99C3A /* Info.plist */,
 				96A3CEFE1CB3666300C99C3A /* ChatWindowController.swift */,
 				96A3CEFF1CB3666300C99C3A /* ChatWindowController.xib */,
-				96A3CF041CB37B6900C99C3A /* IsNotEmptyTransformer.swift */,
 			);
 			path = Chatter;
 			sourceTree = "<group>";
@@ -138,7 +135,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A3CF051CB37B6900C99C3A /* IsNotEmptyTransformer.swift in Sources */,
 				96A3CEF21CB3664C00C99C3A /* AppDelegate.swift in Sources */,
 				96A3CF001CB3666300C99C3A /* ChatWindowController.swift in Sources */,
 			);
@@ -283,6 +279,7 @@
 				96A3CEFD1CB3664C00C99C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
