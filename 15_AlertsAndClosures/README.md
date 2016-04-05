@@ -5,7 +5,7 @@ But, this powerful feature has the disadvantage of potentially creating a strong
 
 The solution is to use a capture list:
 
-```
+```swift
     alert.beginSheetModalForWindow(window!, completionHandler: {
       [unowned self] (response) -> Void in
       
