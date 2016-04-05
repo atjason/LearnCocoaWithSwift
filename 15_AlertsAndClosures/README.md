@@ -7,7 +7,7 @@ The solution is to use a capture list:
 
 ```swift
     alert.beginSheetModalForWindow(window!, completionHandler: {
-      [unowned self] (response) -> Void in
+      [unowned self, weak delegate = self.delegate!] (response) -> Void in
       
       //self.xxx
       
