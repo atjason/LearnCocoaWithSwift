@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96A3CEF21CB3664C00C99C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A3CEF11CB3664C00C99C3A /* AppDelegate.swift */; };
+		96A3CEF41CB3664C00C99C3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A3CEF31CB3664C00C99C3A /* Assets.xcassets */; };
+		96A3CEF71CB3664C00C99C3A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A3CEF51CB3664C00C99C3A /* MainMenu.xib */; };
+		96A3CF001CB3666300C99C3A /* ChatWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A3CEFE1CB3666300C99C3A /* ChatWindowController.swift */; };
+		96A3CF011CB3666300C99C3A /* ChatWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A3CEFF1CB3666300C99C3A /* ChatWindowController.xib */; };
+		96A3CF051CB37B6900C99C3A /* IsNotEmptyTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A3CF041CB37B6900C99C3A /* IsNotEmptyTransformer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96A3CEEE1CB3664C00C99C3A /* Chatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A3CEF11CB3664C00C99C3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96A3CEF31CB3664C00C99C3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96A3CEF61CB3664C00C99C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		96A3CEF81CB3664C00C99C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96A3CEFE1CB3666300C99C3A /* ChatWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatWindowController.swift; sourceTree = "<group>"; };
+		96A3CEFF1CB3666300C99C3A /* ChatWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatWindowController.xib; sourceTree = "<group>"; };
+		96A3CF041CB37B6900C99C3A /* IsNotEmptyTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsNotEmptyTransformer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96A3CEEB1CB3664C00C99C3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96A3CEE51CB3664C00C99C3A = {
+			isa = PBXGroup;
+			children = (
+				96A3CEF01CB3664C00C99C3A /* Chatter */,
+				96A3CEEF1CB3664C00C99C3A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96A3CEEF1CB3664C00C99C3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96A3CEEE1CB3664C00C99C3A /* Chatter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96A3CEF01CB3664C00C99C3A /* Chatter */ = {
+			isa = PBXGroup;
+			children = (
+				96A3CEF11CB3664C00C99C3A /* AppDelegate.swift */,
+				96A3CEF31CB3664C00C99C3A /* Assets.xcassets */,
+				96A3CEF51CB3664C00C99C3A /* MainMenu.xib */,
+				96A3CEF81CB3664C00C99C3A /* Info.plist */,
+				96A3CEFE1CB3666300C99C3A /* ChatWindowController.swift */,
+				96A3CEFF1CB3666300C99C3A /* ChatWindowController.xib */,
+				96A3CF041CB37B6900C99C3A /* IsNotEmptyTransformer.swift */,
+			);
+			path = Chatter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96A3CEED1CB3664C00C99C3A /* Chatter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96A3CEFB1CB3664C00C99C3A /* Build configuration list for PBXNativeTarget "Chatter" */;
+			buildPhases = (
+				96A3CEEA1CB3664C00C99C3A /* Sources */,
+				96A3CEEB1CB3664C00C99C3A /* Frameworks */,
+				96A3CEEC1CB3664C00C99C3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chatter;
+			productName = Chatter;
+			productReference = 96A3CEEE1CB3664C00C99C3A /* Chatter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96A3CEE61CB3664C00C99C3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jason Zheng";
+				TargetAttributes = {
+					96A3CEED1CB3664C00C99C3A = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 96A3CEE91CB3664C00C99C3A /* Build configuration list for PBXProject "Chatter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96A3CEE51CB3664C00C99C3A;
+			productRefGroup = 96A3CEEF1CB3664C00C99C3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96A3CEED1CB3664C00C99C3A /* Chatter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96A3CEEC1CB3664C00C99C3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A3CEF41CB3664C00C99C3A /* Assets.xcassets in Resources */,
+				96A3CEF71CB3664C00C99C3A /* MainMenu.xib in Resources */,
+				96A3CF011CB3666300C99C3A /* ChatWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96A3CEEA1CB3664C00C99C3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A3CF051CB37B6900C99C3A /* IsNotEmptyTransformer.swift in Sources */,
+				96A3CEF21CB3664C00C99C3A /* AppDelegate.swift in Sources */,
+				96A3CF001CB3666300C99C3A /* ChatWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96A3CEF51CB3664C00C99C3A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96A3CEF61CB3664C00C99C3A /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96A3CEF91CB3664C00C99C3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96A3CEFA1CB3664C00C99C3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		96A3CEFC1CB3664C00C99C3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Chatter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atjason.swift.cocoa.Chatter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96A3CEFD1CB3664C00C99C3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Chatter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.atjason.swift.cocoa.Chatter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96A3CEE91CB3664C00C99C3A /* Build configuration list for PBXProject "Chatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96A3CEF91CB3664C00C99C3A /* Debug */,
+				96A3CEFA1CB3664C00C99C3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96A3CEFB1CB3664C00C99C3A /* Build configuration list for PBXNativeTarget "Chatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96A3CEFC1CB3664C00C99C3A /* Debug */,
+				96A3CEFD1CB3664C00C99C3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96A3CEE61CB3664C00C99C3A /* Project object */;
+}
