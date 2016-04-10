@@ -44,8 +44,6 @@ class ChatWindowController: NSWindowController {
                                    name: ChatMessageNotificationDidSent, object: nil)
   }
   
-  
-  
   deinit {
     notificationCenter.removeObserver(self)
   }
