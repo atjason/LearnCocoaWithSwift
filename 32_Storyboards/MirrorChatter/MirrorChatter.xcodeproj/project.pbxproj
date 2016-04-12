@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		9619A23A1CBDBC74009501A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619A2391CBDBC74009501A0 /* AppDelegate.swift */; };
-		9619A23C1CBDBC74009501A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619A23B1CBDBC74009501A0 /* ViewController.swift */; };
 		9619A23E1CBDBC74009501A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9619A23D1CBDBC74009501A0 /* Assets.xcassets */; };
 		9619A2411CBDBC74009501A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9619A23F1CBDBC74009501A0 /* Main.storyboard */; };
+		9619A2491CBDBDD0009501A0 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619A2481CBDBDD0009501A0 /* LeftViewController.swift */; };
+		9619A24B1CBDBDE4009501A0 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619A24A1CBDBDE4009501A0 /* RightViewController.swift */; };
+		9619A24D1CBDBFBF009501A0 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619A24C1CBDBFBF009501A0 /* MainSplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9619A2361CBDBC74009501A0 /* MirrorChatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MirrorChatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9619A2391CBDBC74009501A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9619A23B1CBDBC74009501A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9619A23D1CBDBC74009501A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9619A2401CBDBC74009501A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9619A2421CBDBC74009501A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9619A2481CBDBDD0009501A0 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		9619A24A1CBDBDE4009501A0 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		9619A24C1CBDBFBF009501A0 /* MainSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				9619A2391CBDBC74009501A0 /* AppDelegate.swift */,
-				9619A23B1CBDBC74009501A0 /* ViewController.swift */,
 				9619A23D1CBDBC74009501A0 /* Assets.xcassets */,
 				9619A23F1CBDBC74009501A0 /* Main.storyboard */,
 				9619A2421CBDBC74009501A0 /* Info.plist */,
+				9619A24C1CBDBFBF009501A0 /* MainSplitViewController.swift */,
+				9619A2481CBDBDD0009501A0 /* LeftViewController.swift */,
+				9619A24A1CBDBDE4009501A0 /* RightViewController.swift */,
 			);
 			path = MirrorChatter;
 			sourceTree = "<group>";
@@ -131,8 +137,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9619A23C1CBDBC74009501A0 /* ViewController.swift in Sources */,
+				9619A24D1CBDBFBF009501A0 /* MainSplitViewController.swift in Sources */,
 				9619A23A1CBDBC74009501A0 /* AppDelegate.swift in Sources */,
+				9619A2491CBDBDD0009501A0 /* LeftViewController.swift in Sources */,
+				9619A24B1CBDBDE4009501A0 /* RightViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +283,7 @@
 				9619A2471CBDBC74009501A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
