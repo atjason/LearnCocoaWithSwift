@@ -8,11 +8,30 @@
 
 import Cocoa
 
-class MainSplitViewController: NSSplitViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }
+class MainSplitViewController: NSSplitViewController, LeftViewControllerDelegate, RightViewControllerDelegate {
+  
+  weak var leftViewController: LeftViewController!
+  weak var rightViewController: RightViewController!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
+    leftViewController = splitViewItems[0].viewController as? LeftViewController
+    rightViewController = splitViewItems[1].viewController as? RightViewController
+    
+    leftViewController.delegate = self
+    rightViewController.delegate = self
+  }
+  
+  // MARK: - LeftViewControllerDelegate
+  
+  func leftViewContentChanged(viewController: LeftViewController?, content: String) {
+    rightViewController.setViewContent(content)
+  }
+  
+  // MARK: - RightViewControllerDelegate
+  
+  func rightViewContentChanged(viewController: RightViewController?, content: String) {
+    leftViewController.setViewContent(content)
+  }
 }

@@ -8,11 +8,27 @@
 
 import Cocoa
 
-class LeftViewController: NSViewController {
+class LeftViewController: NSViewController, NSTextFieldDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }
-    
+  dynamic var content = ""
+  weak var delegate: LeftViewControllerDelegate?
+  @IBOutlet weak var textField: NSTextField!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  func setViewContent(content: String) {
+    self.content = content
+  }
+  
+  // MARK: - NSTextFieldDelegate
+  override func controlTextDidChange(obj: NSNotification) {
+    // FIXME: why content didn't change at this time?
+    delegate?.leftViewContentChanged(self, content: textField.stringValue)
+  }
+}
+
+protocol LeftViewControllerDelegate: class {
+  func leftViewContentChanged(viewController: LeftViewController?, content: String)
 }

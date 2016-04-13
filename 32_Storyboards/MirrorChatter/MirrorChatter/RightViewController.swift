@@ -10,9 +10,24 @@ import Cocoa
 
 class RightViewController: NSViewController {
   
+  dynamic var content = ""
+  weak var delegate: RightViewControllerDelegate?
+  @IBOutlet weak var textField: NSTextField!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do view setup here.
   }
   
+  func setViewContent(content: String) {
+    self.content = content
+  }
+  
+  // MARK: - NSTextFieldDelegate
+  override func controlTextDidChange(obj: NSNotification) {
+    delegate?.rightViewContentChanged(self, content: textField.stringValue)
+  }
+}
+
+protocol RightViewControllerDelegate: class {
+  func rightViewContentChanged(viewController: RightViewController?, content: String)
 }
