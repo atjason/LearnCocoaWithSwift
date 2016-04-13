@@ -728,33 +728,23 @@
         <scene sceneID="4Ht-I1-WyH">
             <objects>
                 <viewController id="VKu-hM-jRR" customClass="RightViewController" customModule="MirrorChatter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="VaF-ow-PNn">
+                    <view key="view" id="VaF-ow-PNn">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zK-vB-oMm">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="wu1-TK-iUg">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhU-uX-u1k">
+                                <rect key="frame" x="-2" y="283" width="37" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="vKV-ug-IyM">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <binding destination="VKu-hM-jRR" name="value" keyPath="self.content" id="ARr-wT-XU2"/>
-                                    <outlet property="delegate" destination="VKu-hM-jRR" id="ovI-f6-cep"/>
+                                    <binding destination="VKu-hM-jRR" name="value" keyPath="self.content" id="9HA-vh-GIk"/>
                                 </connections>
                             </textField>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="8zK-vB-oMm" secondAttribute="trailing" id="If5-lp-dPJ"/>
-                            <constraint firstItem="8zK-vB-oMm" firstAttribute="leading" secondItem="VaF-ow-PNn" secondAttribute="leading" id="N7Y-aX-fQd"/>
-                            <constraint firstItem="8zK-vB-oMm" firstAttribute="top" secondItem="VaF-ow-PNn" secondAttribute="top" id="gcz-Go-loE"/>
-                            <constraint firstAttribute="bottom" secondItem="8zK-vB-oMm" secondAttribute="bottom" id="x2v-Ms-pLd"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="textField" destination="8zK-vB-oMm" id="MHp-0P-ytf"/>
-                    </connections>
                 </viewController>
                 <customObject id="Ynx-ug-fiF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

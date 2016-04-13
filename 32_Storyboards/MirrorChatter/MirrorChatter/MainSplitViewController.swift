@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class MainSplitViewController: NSSplitViewController, LeftViewControllerDelegate, RightViewControllerDelegate {
+class MainSplitViewController: NSSplitViewController, LeftViewControllerDelegate {
   
   weak var leftViewController: LeftViewController!
   weak var rightViewController: RightViewController!
@@ -20,18 +20,11 @@ class MainSplitViewController: NSSplitViewController, LeftViewControllerDelegate
     rightViewController = splitViewItems[1].viewController as? RightViewController
     
     leftViewController.delegate = self
-    rightViewController.delegate = self
   }
   
   // MARK: - LeftViewControllerDelegate
   
   func leftViewContentChanged(viewController: LeftViewController?, content: String) {
     rightViewController.setViewContent(content)
-  }
-  
-  // MARK: - RightViewControllerDelegate
-  
-  func rightViewContentChanged(viewController: RightViewController?, content: String) {
-    leftViewController.setViewContent(content)
   }
 }
