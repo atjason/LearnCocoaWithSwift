@@ -650,11 +650,11 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="MirrorChatter" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Mirror Chatter" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="436" y="480" width="480" height="270"/>
+                        <rect key="contentRect" x="436" y="480" width="400" height="200"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="400" height="200"/>
                     </window>
@@ -674,7 +674,7 @@
                         <splitViewItem id="Czi-Wf-BNo"/>
                         <splitViewItem id="1SA-lC-Nv3"/>
                     </splitViewItems>
-                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="6Ew-98-zDe">
+                    <splitView key="splitView" dividerStyle="thin" id="6Ew-98-zDe">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>
@@ -691,12 +691,12 @@
         <scene sceneID="2e2-GH-SAe">
             <objects>
                 <viewController id="4WV-3C-aU1" customClass="LeftViewController" customModule="MirrorChatter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="ciV-o7-arg">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+                    <view key="view" id="ciV-o7-arg">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRF-qM-uxM">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRF-qM-uxM">
+                                <rect key="frame" x="20" y="37" width="360" height="26"/>
                                 <textFieldCell key="cell" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ToC-i8-9GV">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -708,12 +708,6 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="vRF-qM-uxM" firstAttribute="top" secondItem="ciV-o7-arg" secondAttribute="top" id="KRf-d9-hgE"/>
-                            <constraint firstAttribute="trailing" secondItem="vRF-qM-uxM" secondAttribute="trailing" id="M8f-QX-BtF"/>
-                            <constraint firstAttribute="bottom" secondItem="vRF-qM-uxM" secondAttribute="bottom" id="OgQ-M2-UFB"/>
-                            <constraint firstItem="vRF-qM-uxM" firstAttribute="leading" secondItem="ciV-o7-arg" secondAttribute="leading" id="yJj-po-agd"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="textField" destination="vRF-qM-uxM" id="3HU-SW-Y0F"/>
@@ -722,18 +716,18 @@
                 <customObject id="PeY-Kd-PhU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="94S-Ad-UZF"/>
             </objects>
-            <point key="canvasLocation" x="591" y="459"/>
+            <point key="canvasLocation" x="601" y="436"/>
         </scene>
         <!--Right View Controller-->
         <scene sceneID="4Ht-I1-WyH">
             <objects>
                 <viewController id="VKu-hM-jRR" customClass="RightViewController" customModule="MirrorChatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="VaF-ow-PNn">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhU-uX-u1k">
-                                <rect key="frame" x="-2" y="283" width="37" height="17"/>
+                                <rect key="frame" x="18" y="42" width="364" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="vKV-ug-IyM">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
