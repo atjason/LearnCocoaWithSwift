@@ -9,11 +9,15 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+  
+  dynamic var question = ""  
+  dynamic var answer = ""
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Do any additional setup after loading the view.
+    question = "Q: What's the time now?"
+    answer = "A: It's 5:20 am."
   }
 
   override var representedObject: AnyObject? {
