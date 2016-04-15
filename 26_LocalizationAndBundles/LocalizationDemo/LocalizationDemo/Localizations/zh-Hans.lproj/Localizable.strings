@@ -1,7 +1,6 @@
-/* 
-  Localizable.strings
-  LocalizationDemo
+/* Answer */
+"A: It's %@." = "答：现在是 5:20am.";
 
-  Created by Jason Zheng on 4/15/16.
-  Copyright © 2016 Jason Zheng. All rights reserved.
-*/
+/* Question */
+"Q: What's the time now?" = "问：现在几点了？";
+
