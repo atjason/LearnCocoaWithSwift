@@ -16,14 +16,25 @@ class ViewController: NSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    question = "Q: What's the time now?"
-    answer = "A: It's 5:20 am."
+    setLabelStrings()
   }
 
   override var representedObject: AnyObject? {
     didSet {
-    // Update the view, if already loaded.
+    // Update the view, if already loaded.)
     }
+  }
+  
+  // MARK: - Helper
+  
+  func setLabelStrings() {
+    let dateFormatter = NSDateFormatter()
+    dateFormatter.dateStyle = .NoStyle
+    dateFormatter.timeStyle = .ShortStyle
+    let dateString = dateFormatter.stringFromDate(NSDate())
+    
+    question = NSLocalizedString("Q: What's the time now?", comment: "Question")
+    answer = String(format: NSLocalizedString("A: It's %@.", comment: "Answer"), dateString)
   }
 }
 
