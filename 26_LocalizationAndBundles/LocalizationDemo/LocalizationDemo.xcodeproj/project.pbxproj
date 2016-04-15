@@ -53,6 +53,7 @@
 		96093EC11CC0691100184619 /* LocalizationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				96BFECB81CC0A57700003A89 /* Localizations */,
 				96093EC21CC0691100184619 /* AppDelegate.swift */,
 				96093EC41CC0691100184619 /* ViewController.swift */,
 				96093EC61CC0691100184619 /* Assets.xcassets */,
@@ -60,6 +61,13 @@
 				96093ECB1CC0691100184619 /* Info.plist */,
 			);
 			path = LocalizationDemo;
+			sourceTree = "<group>";
+		};
+		96BFECB81CC0A57700003A89 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Localizations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
