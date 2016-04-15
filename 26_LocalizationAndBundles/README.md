@@ -149,6 +149,8 @@ Edit parts for 'Localizable.strings'. Find the following part, add `<target>...<
 
 ![](./_image/ImportLocalization1.jpg)
 
+![](./_image/ImportLocalization2.jpg)
+
 After it's done, open the 'InfoPlist.strings' or 'Localizable.strings', you should be able to say the new translated strings. Did you remember I just said there're 2 ways to edit the string files, and another one is directly edit it? Here it is, you can directly edit the files and add the strings like you added through .xliff.
 
 #Test Localization
@@ -160,6 +162,9 @@ Open 'System Preferences' > 'Language & Region', you can drag Chinese Simplied t
 ![](./_image/ChangeSystemLanguage.jpg)
 
 The disadvantage of this way is, you need to reboot to let the change work. And the entire system's language will be changed. How only change the language for the app? Check the following way.
+
+![](./_image/LocalizationFileWithString.jpg)
+
 
 ##2. Use XCode's Scheme
 You can make Xcode launch the application using the special langauge or region.
