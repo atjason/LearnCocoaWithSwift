@@ -730,8 +730,12 @@
                             <constraint firstItem="iVv-FE-FjF" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="zEi-Ki-f6E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="qpf-iz-2bm" id="Zlb-lF-vZp"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="YPx-eb-tzv"/>
             </objects>
             <point key="canvasLocation" x="40" y="665.5"/>
         </scene>
