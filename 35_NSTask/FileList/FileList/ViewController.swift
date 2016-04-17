@@ -12,17 +12,6 @@ class ViewController: NSViewController {
 
   @IBOutlet var textView: NSTextView!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-  }
-
-  override var representedObject: AnyObject? {
-    didSet {
-    // Update the view, if already loaded.
-    }
-  }
-
   // MARK: - Action
   
   @IBAction func openFolder(sender: NSButton) {
@@ -46,23 +35,38 @@ class ViewController: NSViewController {
     let selection = openPanel.runModal()
     
     if selection == NSFileHandlingPanelOKButton {
-      if let selectedURL = openPanel.URL {
-        if let content = getFileListOf(selectedURL) {
-          if let attrStr = textView.textStorage as? NSMutableAttributedString {
-            attrStr.replaceCharactersInRange(NSRange(0..<attrStr.length), withString: content)
+      if let path = openPanel.URL?.path {
+        if let content = getFileListOf(path) {
+          if let textStorage = textView.textStorage {
+            textStorage.replaceCharactersInRange(NSRange(0..<textStorage.length), withString: content)
           }
         }
       }
     }
-
   }
   
   // MARK: - Helper
   
-  func getFileListOf(path: NSURL) -> String? {
+  func getFileListOf(path: String) -> String? {
+    let task = NSTask()
+    task.launchPath = "/bin/ls"
+    task.arguments = ["-l", path]
     
-//    return nil
-    return path.absoluteString
+    let pipe = NSPipe()
+    task.standardOutput = pipe
+    
+    task.launch()
+    task.waitUntilExit()
+    
+    let fileHandler = pipe.fileHandleForReading
+    let data = fileHandler.readDataToEndOfFile()
+    
+    if task.terminationStatus != 0 {
+      NSLog("Failed to open file list. Reason: \(task.terminationReason)")
+      return nil
+    }
+    
+    return NSString(data: data, encoding: NSUTF8StringEncoding) as? String
   }
 }
 
