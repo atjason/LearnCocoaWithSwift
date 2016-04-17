@@ -73,7 +73,7 @@ class ViewController: NSViewController {
       }
     }
     
-    // Continue to read if fileHandle isn't nil.
+    // Continue to read if task is running (i.e., fileHandle isn't nil).
     fileHandle?.readInBackgroundAndNotify()
   }
   
@@ -87,9 +87,7 @@ class ViewController: NSViewController {
   // MARK: - Helper
   
   func clearString() {
-    if let textStorage = textView.textStorage {
-      textStorage.replaceCharactersInRange(NSRange(0..<textStorage.length), withString: "")
-    }
+    textView.string = ""
   }
   
   func appendString(string: String) {
