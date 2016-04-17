@@ -18,14 +18,15 @@ class ViewController: NSViewController {
   let notificationCenter = NSNotificationCenter.defaultCenter()
   
   var task: NSTask?
-  var pipe: NSPipe?
   var fileHandle: NSFileHandle?
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    domain = "toolinbox.net"
   }
   
-  deinit {
+  override func viewWillDisappear() {
     notificationCenter.removeObserver(self)
   }
 
@@ -34,15 +35,13 @@ class ViewController: NSViewController {
   @IBAction func ping(sender: NSButton) {
     
     if sender.state == NSOnState {
-      
       task = NSTask()
       task?.launchPath = "/sbin/ping"
       task?.arguments = ["-c4", domain]
       
-      pipe = NSPipe()
+      let pipe = NSPipe()
       task?.standardOutput = pipe
-      
-      fileHandle = pipe?.fileHandleForReading
+      fileHandle = pipe.fileHandleForReading
       
       notificationCenter.removeObserver(self)
       notificationCenter.addObserver(self,
@@ -77,7 +76,6 @@ class ViewController: NSViewController {
   
   func receiveTerminateNotification(notification: NSNotification) {
     task = nil
-    pipe = nil
     fileHandle = nil
     
     pingButton.state = NSOffState
