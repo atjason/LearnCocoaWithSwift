@@ -671,11 +671,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Ping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="410" height="291"/>
+                        <rect key="frame" x="0.0" y="0.0" width="439" height="291"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EzX-x2-6z1">
-                                <rect key="frame" x="20" y="249" width="273" height="22"/>
+                                <rect key="frame" x="20" y="249" width="302" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="toolinbox.net" drawsBackground="YES" id="Xja-YG-xJF">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -690,19 +690,19 @@
                                 </connections>
                             </textField>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVv-FE-FjF">
-                                <rect key="frame" x="20" y="20" width="370" height="221"/>
+                                <rect key="frame" x="20" y="20" width="399" height="221"/>
                                 <clipView key="contentView" id="H9X-dd-nTL">
-                                    <rect key="frame" x="1" y="1" width="368" height="219"/>
+                                    <rect key="frame" x="1" y="1" width="397" height="219"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="qpf-iz-2bm">
-                                            <rect key="frame" x="0.0" y="0.0" width="368" height="219"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="397" height="219"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="368" height="219"/>
+                                            <size key="minSize" width="397" height="219"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="368" height="219"/>
+                                            <size key="minSize" width="397" height="219"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                         </textView>
                                     </subviews>
@@ -718,7 +718,7 @@
                                 </scroller>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m6d-2Y-sOb">
-                                <rect key="frame" x="295" y="243" width="101" height="32"/>
+                                <rect key="frame" x="324" y="243" width="101" height="32"/>
                                 <buttonCell key="cell" type="push" title="Start Ping" alternateTitle="Stop Ping" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YS4-Ev-feU">
                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -748,7 +748,7 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="YPx-eb-tzv"/>
             </objects>
-            <point key="canvasLocation" x="40" y="665.5"/>
+            <point key="canvasLocation" x="54.5" y="665.5"/>
         </scene>
     </scenes>
 </document>

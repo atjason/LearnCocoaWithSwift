@@ -58,6 +58,9 @@ class ViewController: NSViewController {
       
     } else {
       task?.interrupt()
+      
+      task = nil
+      fileHandle = nil
     }
   }
   
