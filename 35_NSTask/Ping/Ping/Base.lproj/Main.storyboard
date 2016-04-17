@@ -716,6 +716,9 @@
                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="ping:" target="XfG-lQ-9wD" id="5gf-Ha-dz2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>

@@ -20,10 +20,16 @@ class ViewController: NSViewController {
   
   @IBAction func ping(sender: NSButton) {
     
-    if let textStorage = textView.textStorage {
-      textStorage.replaceCharactersInRange(NSRange(0..<textStorage.length), withString: "Hello World!")
+    if sender.state == NSOnState {
+      if let textStorage = textView.textStorage {
+        textStorage.replaceCharactersInRange(NSRange(0..<textStorage.length), withString: "Ping...")
+      }
+      
+    } else {
+      if let textStorage = textView.textStorage {
+        textStorage.replaceCharactersInRange(NSRange(0..<textStorage.length), withString: "Ping stopped.")
+      }
     }
-  
   }
 }
 
