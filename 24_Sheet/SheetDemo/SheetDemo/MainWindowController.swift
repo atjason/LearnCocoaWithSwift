@@ -26,6 +26,7 @@ class MainWindowController: NSWindowController {
     }
     
     if let window = addPersonWindowController?.window {
+      addPersonWindowController?.person = Person(name: "", age: 0)
       self.window?.beginSheet(window, completionHandler: addNewPerson)
     }
   }
