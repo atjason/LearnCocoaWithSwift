@@ -9,11 +9,46 @@
 import Cocoa
 
 class AddPersonWindowController: NSWindowController {
-
-  override func windowDidLoad() {
-    super.windowDidLoad()
+  
+  dynamic var name = ""
+  dynamic var age = 0
+  
+  var person: Person {
+    get {
+      return Person(name: name, age: age)
+    }
     
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    set {
+      name = newValue.name
+      age = newValue.age
+    }
+  }
+
+  override var windowNibName: String? {
+    return "AddPersonWindowController"
   }
   
+  override func windowDidLoad() {
+    super.windowDidLoad()
+  }
+  
+  // MARK: - Action
+  
+  @IBAction func add(sender: NSButton) {
+    // This is let binding value be updated.
+    window?.endEditingFor(nil)
+    dismissWindowWithResponse(NSModalResponseOK)
+  }
+  
+  @IBAction func cancel(sender: NSButton) {
+    dismissWindowWithResponse(NSModalResponseCancel)
+  }
+  
+  // MARK: - Helper
+  
+  func dismissWindowWithResponse(response: Int) {
+    if let window = window {
+      window.parentWindow?.endSheet(window, returnCode: response)
+    }
+  }
 }
