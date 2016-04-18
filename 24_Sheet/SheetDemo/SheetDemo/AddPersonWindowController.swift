@@ -56,7 +56,7 @@ class AddPersonWindowController: NSWindowController {
   
   // MARK: - Helper
   
-  func dismissWindowWithResponse(response: Int) {
+  func dismissWindowWithResponse(response: NSModalResponse) {
     if let window = window {
       window.sheetParent?.endSheet(window, returnCode: response)
     }
