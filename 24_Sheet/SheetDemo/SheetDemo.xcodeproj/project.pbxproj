@@ -12,6 +12,8 @@
 		96F7FEFD1CC59103007C840C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F7FEFB1CC59103007C840C /* MainMenu.xib */; };
 		96F7FF061CC59114007C840C /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7FF041CC59114007C840C /* MainWindowController.swift */; };
 		96F7FF071CC59114007C840C /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F7FF051CC59114007C840C /* MainWindowController.xib */; };
+		96F7FF0A1CC59196007C840C /* AddPersonWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7FF081CC59196007C840C /* AddPersonWindowController.swift */; };
+		96F7FF0B1CC59196007C840C /* AddPersonWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F7FF091CC59196007C840C /* AddPersonWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		96F7FEFE1CC59103007C840C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96F7FF041CC59114007C840C /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		96F7FF051CC59114007C840C /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		96F7FF081CC59196007C840C /* AddPersonWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonWindowController.swift; sourceTree = "<group>"; };
+		96F7FF091CC59196007C840C /* AddPersonWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPersonWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				96F7FEFE1CC59103007C840C /* Info.plist */,
 				96F7FF041CC59114007C840C /* MainWindowController.swift */,
 				96F7FF051CC59114007C840C /* MainWindowController.xib */,
+				96F7FF081CC59196007C840C /* AddPersonWindowController.swift */,
+				96F7FF091CC59196007C840C /* AddPersonWindowController.xib */,
 			);
 			path = SheetDemo;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			files = (
 				96F7FEFA1CC59103007C840C /* Assets.xcassets in Resources */,
 				96F7FF071CC59114007C840C /* MainWindowController.xib in Resources */,
+				96F7FF0B1CC59196007C840C /* AddPersonWindowController.xib in Resources */,
 				96F7FEFD1CC59103007C840C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 			files = (
 				96F7FF061CC59114007C840C /* MainWindowController.swift in Sources */,
 				96F7FEF81CC59103007C840C /* AppDelegate.swift in Sources */,
+				96F7FF0A1CC59196007C840C /* AddPersonWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
