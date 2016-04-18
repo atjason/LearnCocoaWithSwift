@@ -48,7 +48,7 @@ class AddPersonWindowController: NSWindowController {
   
   func dismissWindowWithResponse(response: Int) {
     if let window = window {
-      window.parentWindow?.endSheet(window, returnCode: response)
+      window.sheetParent?.endSheet(window, returnCode: response)
     }
   }
 }
