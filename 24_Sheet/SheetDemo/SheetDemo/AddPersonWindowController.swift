@@ -14,6 +14,8 @@ class AddPersonWindowController: NSWindowController {
   dynamic var age = 0
   dynamic var ageList = [Int]()
   
+  @IBOutlet weak var addButton: NSButton!
+  
   var person: Person {
     get {
       return Person(name: name, age: age)
@@ -36,6 +38,8 @@ class AddPersonWindowController: NSWindowController {
     for num in 0...100 {
       ageList.append(num)
     }
+    
+    addButton.keyEquivalent = "\r"
   }
   
   // MARK: - Action

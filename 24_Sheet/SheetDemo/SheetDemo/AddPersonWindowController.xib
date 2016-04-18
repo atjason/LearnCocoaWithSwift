@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AddPersonWindowController" customModule="SheetDemo" customModuleProvider="target">
             <connections>
+                <outlet property="addButton" destination="mY4-yS-Hwq" id="N5y-UH-0sV"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -56,29 +57,6 @@
                             <binding destination="-2" name="value" keyPath="self.name" id="EzL-LN-nru"/>
                         </connections>
                     </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mY4-yS-Hwq">
-                        <rect key="frame" x="168" y="13" width="65" height="32"/>
-                        <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CCC-cH-hrJ">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="add:" target="-2" id="sHi-kK-8qB"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BIJ-Wb-aAP">
-                        <rect key="frame" x="86" y="13" width="82" height="32"/>
-                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="c3S-aF-hOQ">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <string key="keyEquivalent" base64-UTF8="YES">
-Gw
-</string>
-                        </buttonCell>
-                        <connections>
-                            <action selector="cancel:" target="-2" id="tvj-3R-kop"/>
-                        </connections>
-                    </button>
                     <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2B-tT-w7m">
                         <rect key="frame" x="131" y="63" width="99" height="26"/>
                         <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="Wie-vv-CYu">
@@ -92,11 +70,41 @@ Gw
                             </objectValues>
                         </comboBoxCell>
                         <connections>
-                            <binding destination="-2" name="contentValues" keyPath="self.ageList" id="nrv-Vy-tmg"/>
                             <binding destination="-2" name="value" keyPath="self.age" previousBinding="nrv-Vy-tmg" id="FKY-2x-WeP"/>
+                            <binding destination="-2" name="contentValues" keyPath="self.ageList" id="nrv-Vy-tmg"/>
                         </connections>
                     </comboBox>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mY4-yS-Hwq">
+                        <rect key="frame" x="151" y="13" width="82" height="32"/>
+                        <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CCC-cH-hrJ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="add:" target="-2" id="lbH-rx-AYb"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BIJ-Wb-aAP">
+                        <rect key="frame" x="64" y="13" width="82" height="32"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="c3S-aF-hOQ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancel:" target="-2" id="tvj-3R-kop"/>
+                        </connections>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="mY4-yS-Hwq" firstAttribute="width" secondItem="BIJ-Wb-aAP" secondAttribute="width" id="8x2-wg-JwD"/>
+                    <constraint firstAttribute="trailing" secondItem="mY4-yS-Hwq" secondAttribute="trailing" constant="20" id="Kem-fC-xzQ"/>
+                    <constraint firstItem="mY4-yS-Hwq" firstAttribute="leading" secondItem="BIJ-Wb-aAP" secondAttribute="trailing" constant="17" id="PC8-8F-hW2"/>
+                    <constraint firstAttribute="bottom" secondItem="BIJ-Wb-aAP" secondAttribute="bottom" constant="20" id="fdo-k5-Tlw"/>
+                    <constraint firstAttribute="bottom" secondItem="mY4-yS-Hwq" secondAttribute="bottom" constant="20" id="u7K-uP-1vA"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
