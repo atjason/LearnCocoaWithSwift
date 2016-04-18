@@ -12,6 +12,7 @@ class AddPersonWindowController: NSWindowController {
   
   dynamic var name = ""
   dynamic var age = 0
+  dynamic var ageList = [Int]()
   
   var person: Person {
     get {
@@ -30,6 +31,11 @@ class AddPersonWindowController: NSWindowController {
   
   override func windowDidLoad() {
     super.windowDidLoad()
+    
+    ageList.removeAll()
+    for num in 0...100 {
+      ageList.append(num)
+    }
   }
   
   // MARK: - Action

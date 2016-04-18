@@ -56,17 +56,6 @@
                             <binding destination="-2" name="value" keyPath="self.name" id="EzL-LN-nru"/>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TeX-uD-7Oz">
-                        <rect key="frame" x="131" y="66" width="96" height="22"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="O2O-g0-Ke2">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                        <connections>
-                            <binding destination="-2" name="value" keyPath="self.age" id="Eug-GN-8Wc"/>
-                        </connections>
-                    </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mY4-yS-Hwq">
                         <rect key="frame" x="168" y="13" width="65" height="32"/>
                         <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CCC-cH-hrJ">
@@ -90,6 +79,23 @@ Gw
                             <action selector="cancel:" target="-2" id="tvj-3R-kop"/>
                         </connections>
                     </button>
+                    <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2B-tT-w7m">
+                        <rect key="frame" x="131" y="63" width="99" height="26"/>
+                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="Wie-vv-CYu">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <objectValues>
+                                <string>Item 1</string>
+                                <string>Item 2</string>
+                                <string>Item 3</string>
+                            </objectValues>
+                        </comboBoxCell>
+                        <connections>
+                            <binding destination="-2" name="contentValues" keyPath="self.ageList" id="nrv-Vy-tmg"/>
+                            <binding destination="-2" name="value" keyPath="self.age" previousBinding="nrv-Vy-tmg" id="FKY-2x-WeP"/>
+                        </connections>
+                    </comboBox>
                 </subviews>
             </view>
             <connections>
