@@ -20,6 +20,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // Note: Can't access imageView! at this time, as the view hasn't been loaded, 
     //       this outlet hasn't link with the real view, thus it's nil.
     // imageViewControllerA.imageView.image = NSImage(imageLiteral: NSImageNameFlowViewTemplate)
+    
+    // The view hierarchy is lazily loaded. When the view property is accessed, 
+    //   the view controller calls loadView(), which defaults to loading the view from a NIB file. 
+    //   However, you can override loadView() to create the view programmatically.
+    
     // So, another way is to directly set the image, and then bind this image to imageView's value (i.e., image)
     imageViewControllerA.image = NSImage(imageLiteral: NSImageNameFlowViewTemplate)
     
