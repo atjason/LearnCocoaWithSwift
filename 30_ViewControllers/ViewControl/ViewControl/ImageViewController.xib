@@ -19,7 +19,7 @@
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-GH-Z90">
                     <rect key="frame" x="20" y="20" width="200" height="200"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="hpQ-vO-3aV"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="hpQ-vO-3aV"/>
                     <connections>
                         <binding destination="-2" name="value" keyPath="self.image" id="8Sv-k7-cWg"/>
                     </connections>
