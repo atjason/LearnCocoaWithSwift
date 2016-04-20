@@ -12,6 +12,7 @@
 		96737F4F1CC7822D00EC41B7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96737F4D1CC7822D00EC41B7 /* MainMenu.xib */; };
 		96737F581CC7825500EC41B7 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96737F561CC7825500EC41B7 /* MainWindowController.swift */; };
 		96737F591CC7825500EC41B7 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96737F571CC7825500EC41B7 /* MainWindowController.xib */; };
+		96737F5B1CC782AF00EC41B7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96737F5A1CC782AF00EC41B7 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		96737F501CC7822D00EC41B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96737F561CC7825500EC41B7 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		96737F571CC7825500EC41B7 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		96737F5A1CC782AF00EC41B7 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				96737F4B1CC7822D00EC41B7 /* Assets.xcassets */,
 				96737F4D1CC7822D00EC41B7 /* MainMenu.xib */,
 				96737F501CC7822D00EC41B7 /* Info.plist */,
+				96737F5A1CC782AF00EC41B7 /* Person.swift */,
 				96737F561CC7825500EC41B7 /* MainWindowController.swift */,
 				96737F571CC7825500EC41B7 /* MainWindowController.xib */,
 			);
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96737F5B1CC782AF00EC41B7 /* Person.swift in Sources */,
 				96737F581CC7825500EC41B7 /* MainWindowController.swift in Sources */,
 				96737F4A1CC7822D00EC41B7 /* AppDelegate.swift in Sources */,
 			);
