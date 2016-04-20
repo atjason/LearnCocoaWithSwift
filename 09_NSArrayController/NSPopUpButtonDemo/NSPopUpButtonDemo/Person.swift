@@ -8,11 +8,13 @@
 
 import Foundation
 
-class Person {
+class Person: NSObject {
   var name = ""
   var age = 0
   
   init(name: String, age: Int) {
+    super.init()
+    
     self.name = name
     self.age = age
   }
