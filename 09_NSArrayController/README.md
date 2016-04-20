@@ -63,8 +63,33 @@ Note:
 
 - Select the table view. 
 - Switch to the bindings inspector and find the Table Content section. 
-- Bind the table view’s Content to the Array Controller’s arrangedObjects. 
-- Leave the Model Key Path empty. Ignore the red error indicator at the right-hand side of the Model Key Path field.
+- Bind the table view’s Content to the Array Controller’s arrangedObjects. Note: Leave the Model Key Path empty. Ignore the red error indicator at the right-hand side of the Model Key Path field.
+- Bind the table view's 'Selection Indexes' to  Array Controller's 'selectionIndexes'.
+
+
+
+# NSPopUpButton
+
+[NSPopUpButton Bindings](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/CocoaBindingsRef/BindingsText/NSPopUpButton.html)
+
+Bindings:
+
+- Bind '**Content**' to Array Controller's '**arrangedObjects**'.
+
+![](./images/BindContent.jpg)
+
+- Bind '**Content Value**' to Array Controller's '**arrangedObjects.name**', i.e., the content of object. 
+  - Otherwise it will use object's '**description**' propery. 
+  - 'Content Value' is an array of strings that are displayed as the items in the NSPopUpButton.
+
+![](./images/BindContentValues.jpg)
+
+- Bind '**Selected Object**' to file owner's some **dynamic property**. Then could use the selected object. 
+  - Could also use selected index/tag/value, but could only use one of them. 
+  - **Note**: If you set default value of selected object in the file owner, it will be shown in pop up button. The correct way is to set to member of array you initialized in file owner.
+
+![](./images/BindSelectedObject.jpg)
+
 
 # Notes
 
