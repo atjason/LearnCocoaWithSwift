@@ -10,6 +10,8 @@
 		96737F2D1CC7131600EC41B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96737F2C1CC7131600EC41B7 /* AppDelegate.swift */; };
 		96737F2F1CC7131600EC41B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96737F2E1CC7131600EC41B7 /* Assets.xcassets */; };
 		96737F321CC7131600EC41B7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96737F301CC7131600EC41B7 /* MainMenu.xib */; };
+		96737F3A1CC7135F00EC41B7 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96737F391CC7135F00EC41B7 /* ImageViewController.swift */; };
+		96737F3C1CC7136E00EC41B7 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96737F3B1CC7136E00EC41B7 /* ImageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		96737F2E1CC7131600EC41B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96737F311CC7131600EC41B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		96737F331CC7131600EC41B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96737F391CC7135F00EC41B7 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		96737F3B1CC7136E00EC41B7 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 				96737F2E1CC7131600EC41B7 /* Assets.xcassets */,
 				96737F301CC7131600EC41B7 /* MainMenu.xib */,
 				96737F331CC7131600EC41B7 /* Info.plist */,
+				96737F391CC7135F00EC41B7 /* ImageViewController.swift */,
+				96737F3B1CC7136E00EC41B7 /* ImageViewController.xib */,
 			);
 			path = ViewControl;
 			sourceTree = "<group>";
@@ -117,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96737F2F1CC7131600EC41B7 /* Assets.xcassets in Resources */,
+				96737F3C1CC7136E00EC41B7 /* ImageViewController.xib in Resources */,
 				96737F321CC7131600EC41B7 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96737F3A1CC7135F00EC41B7 /* ImageViewController.swift in Sources */,
 				96737F2D1CC7131600EC41B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
