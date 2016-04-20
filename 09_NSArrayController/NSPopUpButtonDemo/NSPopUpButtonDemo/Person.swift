@@ -12,6 +12,10 @@ class Person: NSObject {
   var name = ""
   var age = 0
   
+  override init() {
+    super.init()
+  }
+  
   init(name: String, age: Int) {
     super.init()
     
