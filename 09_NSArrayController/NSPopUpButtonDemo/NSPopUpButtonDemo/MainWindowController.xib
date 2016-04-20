@@ -15,15 +15,50 @@
         <window title="NSPopUpButton" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="contentRect" x="196" y="240" width="188" height="86"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="188" height="86"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAC-fC-nlp">
+                        <rect key="frame" x="18" y="42" width="153" height="26"/>
+                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="rwC-R3-klF" id="0tv-eA-rm4">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="dVg-QD-MJU">
+                                <items>
+                                    <menuItem title="Item 1" state="on" id="rwC-R3-klF"/>
+                                    <menuItem title="Item 2" id="Lly-Mx-ZOr"/>
+                                    <menuItem title="Item 3" id="xjO-7K-zx0"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <binding destination="vu3-y0-9bk" name="content" keyPath="arrangedObjects" id="OwS-gD-pUg"/>
+                            <binding destination="vu3-y0-9bk" name="contentValues" keyPath="arrangedObjects.name" previousBinding="OwS-gD-pUg" id="oLV-WK-yJR"/>
+                        </connections>
+                    </popUpButton>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K88-uh-bIu">
+                        <rect key="frame" x="18" y="20" width="152" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Wd2-In-a0L">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
+            <point key="canvasLocation" x="132" y="246"/>
         </window>
+        <arrayController objectClassName="NSPopUpButtonDemo.Person" id="vu3-y0-9bk">
+            <connections>
+                <binding destination="-2" name="contentArray" keyPath="self.personArray" id="xlB-vI-HLm"/>
+            </connections>
+        </arrayController>
+        <userDefaultsController representsSharedInstance="YES" id="7ai-04-sem"/>
     </objects>
 </document>
