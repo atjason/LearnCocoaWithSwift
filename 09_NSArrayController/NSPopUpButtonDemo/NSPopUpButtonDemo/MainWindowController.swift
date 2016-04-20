@@ -11,9 +11,11 @@ import Cocoa
 class MainWindowController: NSWindowController {
   
   dynamic var personArray = [Person]()
-  dynamic var personSelected = Person() {
+  dynamic var personSelected: Person? {
     didSet {
-      personDescription = "\(personSelected.name) is \(personSelected.age) years old."
+      if let person = personSelected {
+        personDescription = "\(person.name) is \(person.age) years old."
+      }
     }
   }
   dynamic var personDescription = ""
@@ -27,5 +29,6 @@ class MainWindowController: NSWindowController {
     
     personArray.append(Person(name: "Tom", age: 30))
     personArray.append(Person(name: "Jack", age: 29))
+    personSelected = personArray[0]
   }
 }
