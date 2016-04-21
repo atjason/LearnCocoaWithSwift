@@ -10,6 +10,7 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+  var imageLayers = [CALayer]()
   var textLayer: CATextLayer!
   var text: String? {
     didSet {
@@ -57,6 +58,10 @@ class ViewController: NSViewController {
   }
   
   @IBAction func loadImages(sender: NSButton) {
+    for layer in imageLayers {
+      layer.removeFromSuperlayer()
+    }
+    
     let url = NSURL(fileURLWithPath: "/Library/Desktop Pictures")
     addImagesFromFolderURL(url)
   }
@@ -134,6 +139,7 @@ class ViewController: NSViewController {
     layer.actions =
       ["position" : positionAnimation,
        "bounds"   : boundsAnimation]
+    imageLayers.append(layer)
     
     CATransaction.begin()
     view.layer!.addSublayer(layer)
