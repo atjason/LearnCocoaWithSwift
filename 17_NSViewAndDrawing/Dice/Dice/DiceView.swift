@@ -9,5 +9,8 @@
 import Cocoa
 
 class DiceView: NSView {
-  
+  override func drawRect(dirtyRect: NSRect) {
+    NSColor.lightGrayColor().set()
+    NSBezierPath.fillRect(bounds)
+  }
 }
