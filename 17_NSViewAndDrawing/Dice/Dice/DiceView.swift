@@ -12,5 +12,11 @@ class DiceView: NSView {
   override func drawRect(dirtyRect: NSRect) {
     NSColor.lightGrayColor().set()
     NSBezierPath.fillRect(bounds)
+    
+    NSColor.greenColor().set()
+    let path = NSBezierPath()
+    path.moveToPoint(NSPoint(x: 0, y: 0))
+    path.lineToPoint(NSPoint(x: bounds.width, y: bounds.height))
+    path.stroke()
   }
 }
