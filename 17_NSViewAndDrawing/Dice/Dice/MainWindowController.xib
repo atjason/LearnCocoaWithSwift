@@ -20,6 +20,17 @@
             <view key="contentView" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="kft-h1-Ses" customClass="DiceView" customModule="Dice" customModuleProvider="target">
+                        <rect key="frame" x="20" y="20" width="440" height="230"/>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kft-h1-Ses" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="06v-gU-HeB"/>
+                    <constraint firstItem="kft-h1-Ses" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="Jst-cX-cpr"/>
+                    <constraint firstAttribute="trailing" secondItem="kft-h1-Ses" secondAttribute="trailing" constant="20" id="Nl5-zh-EPi"/>
+                    <constraint firstAttribute="bottom" secondItem="kft-h1-Ses" secondAttribute="bottom" constant="20" id="spb-03-Oeb"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>

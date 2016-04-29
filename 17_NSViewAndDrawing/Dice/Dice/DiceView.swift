@@ -8,6 +8,6 @@
 
 import Cocoa
 
-class Diceview: NSView {
+class DiceView: NSView {
   
 }
