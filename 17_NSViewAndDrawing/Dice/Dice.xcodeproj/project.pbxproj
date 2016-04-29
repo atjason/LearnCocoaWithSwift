@@ -12,6 +12,7 @@
 		96791A2B1CD428740098A289 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791A291CD428740098A289 /* MainMenu.xib */; };
 		96791A341CD4288C0098A289 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96791A321CD4288C0098A289 /* MainWindowController.swift */; };
 		96791A351CD4288C0098A289 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791A331CD4288C0098A289 /* MainWindowController.xib */; };
+		96791A371CD4291B0098A289 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96791A361CD4291B0098A289 /* DiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		96791A2C1CD428740098A289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96791A321CD4288C0098A289 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		96791A331CD4288C0098A289 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		96791A361CD4291B0098A289 /* DiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				96791A271CD428740098A289 /* Assets.xcassets */,
 				96791A291CD428740098A289 /* MainMenu.xib */,
 				96791A2C1CD428740098A289 /* Info.plist */,
+				96791A361CD4291B0098A289 /* DiceView.swift */,
 				96791A321CD4288C0098A289 /* MainWindowController.swift */,
 				96791A331CD4288C0098A289 /* MainWindowController.xib */,
 			);
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96791A341CD4288C0098A289 /* MainWindowController.swift in Sources */,
+				96791A371CD4291B0098A289 /* DiceView.swift in Sources */,
 				96791A261CD428740098A289 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +283,7 @@
 				96791A311CD428740098A289 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
