@@ -14,11 +14,15 @@ class DiceView: NSView {
     NSColor.lightGrayColor().set()
     NSBezierPath.fillRect(bounds)
     
-    NSColor.greenColor().set()
-    let path = NSBezierPath()
-    path.moveToPoint(NSPoint(x: 0, y: 0))
-    path.lineToPoint(NSPoint(x: bounds.width, y: bounds.height))
-    path.stroke()
+    drawDieWithSize(bounds.size)
+  }
+  
+  func drawDieWithSize(size: NSSize) {
+    let (edgeLength, dieFrame) = metricsForSize(size)
+    
+    let cornerRadius = edgeLength / 5.0
+    NSColor.whiteColor().set()
+    NSBezierPath(roundedRect: dieFrame, xRadius: cornerRadius, yRadius: cornerRadius).fill()
   }
   
   func metricsForSize(size: NSSize) -> (edgeLength: CGFloat, dieFrame: NSRect) {
