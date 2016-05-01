@@ -20,10 +20,27 @@
             <view key="contentView" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="wg6-3f-U3s" customClass="TiledImageView" customModule="ImageTiling" customModuleProvider="target">
+                        <rect key="frame" x="20" y="20" width="440" height="230"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="NSComputer"/>
+                        </userDefinedRuntimeAttributes>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="wg6-3f-U3s" secondAttribute="trailing" constant="20" id="MHi-c8-caY"/>
+                    <constraint firstItem="wg6-3f-U3s" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="QmE-ud-eZa"/>
+                    <constraint firstAttribute="bottom" secondItem="wg6-3f-U3s" secondAttribute="bottom" constant="20" id="bKt-FR-8rs"/>
+                    <constraint firstItem="wg6-3f-U3s" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="fgU-zN-5M0"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
         </window>
     </objects>
+    <resources>
+        <image name="NSComputer" width="32" height="32"/>
+    </resources>
 </document>

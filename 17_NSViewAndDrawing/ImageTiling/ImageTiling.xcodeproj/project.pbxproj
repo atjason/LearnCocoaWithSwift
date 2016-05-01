@@ -60,9 +60,9 @@
 				96791A461CD582710098A289 /* Assets.xcassets */,
 				96791A481CD582710098A289 /* MainMenu.xib */,
 				96791A4B1CD582710098A289 /* Info.plist */,
+				96791A551CD582F00098A289 /* TiledImageView.swift */,
 				96791A511CD5829E0098A289 /* MainWindowController.swift */,
 				96791A521CD5829E0098A289 /* MainWindowController.xib */,
-				96791A551CD582F00098A289 /* TiledImageView.swift */,
 			);
 			path = ImageTiling;
 			sourceTree = "<group>";
