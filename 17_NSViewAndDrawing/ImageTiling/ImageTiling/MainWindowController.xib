@@ -21,18 +21,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="wg6-3f-U3s" customClass="TiledImageView" customModule="ImageTiling" customModuleProvider="target">
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBb-cc-OxW">
                         <rect key="frame" x="20" y="20" width="440" height="230"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="NSComputer"/>
-                        </userDefinedRuntimeAttributes>
-                    </customView>
+                        <clipView key="contentView" id="iqB-aY-JAs">
+                            <rect key="frame" x="1" y="1" width="423" height="213"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wg6-3f-U3s" customClass="TiledImageView" customModule="ImageTiling" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="423" height="213"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="NSComputer"/>
+                                    </userDefinedRuntimeAttributes>
+                                </customView>
+                            </subviews>
+                        </clipView>
+                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="UC8-cl-Vnu">
+                            <rect key="frame" x="1" y="214" width="423" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="Rkj-ya-txP">
+                            <rect key="frame" x="424" y="1" width="15" height="213"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="wg6-3f-U3s" secondAttribute="trailing" constant="20" id="MHi-c8-caY"/>
-                    <constraint firstItem="wg6-3f-U3s" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="QmE-ud-eZa"/>
-                    <constraint firstAttribute="bottom" secondItem="wg6-3f-U3s" secondAttribute="bottom" constant="20" id="bKt-FR-8rs"/>
-                    <constraint firstItem="wg6-3f-U3s" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="fgU-zN-5M0"/>
+                    <constraint firstItem="nBb-cc-OxW" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="Ajl-Ob-OVG"/>
+                    <constraint firstAttribute="bottom" secondItem="nBb-cc-OxW" secondAttribute="bottom" constant="20" id="Jco-2h-IDJ"/>
+                    <constraint firstAttribute="trailing" secondItem="nBb-cc-OxW" secondAttribute="trailing" constant="20" id="ro0-QI-uk4"/>
+                    <constraint firstItem="nBb-cc-OxW" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="ryq-wh-1hP"/>
                 </constraints>
             </view>
             <connections>
