@@ -10,8 +10,8 @@ import Cocoa
 
 @IBDesignable class TiledImageView: NSView {
   @IBInspectable var image: NSImage?
-  let rowCount = 5
-  let columnCount = 4
+  let rowCount = 4
+  let columnCount = 5
   
   override var intrinsicContentSize: NSSize {
     let furthestFrame = frameForImageAtLogicalX(columnCount - 1, y: rowCount - 1)
@@ -20,8 +20,8 @@ import Cocoa
   
   override func drawRect(dirtyRect: NSRect) {
     if let image = image {
-      for x in (0..<rowCount) {
-        for y in (0..<columnCount) {
+      for x in (0..<columnCount) {
+        for y in (0..<rowCount) {
           let frame = frameForImageAtLogicalX(x, y: y)
           image.drawInRect(frame)
         }
