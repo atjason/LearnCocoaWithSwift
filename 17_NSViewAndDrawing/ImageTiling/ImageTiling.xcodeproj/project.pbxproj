@@ -10,6 +10,8 @@
 		96791A451CD582710098A289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96791A441CD582710098A289 /* AppDelegate.swift */; };
 		96791A471CD582710098A289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96791A461CD582710098A289 /* Assets.xcassets */; };
 		96791A4A1CD582710098A289 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791A481CD582710098A289 /* MainMenu.xib */; };
+		96791A531CD5829E0098A289 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96791A511CD5829E0098A289 /* MainWindowController.swift */; };
+		96791A541CD5829E0098A289 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791A521CD5829E0098A289 /* MainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		96791A461CD582710098A289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96791A491CD582710098A289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		96791A4B1CD582710098A289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96791A511CD5829E0098A289 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		96791A521CD5829E0098A289 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 				96791A461CD582710098A289 /* Assets.xcassets */,
 				96791A481CD582710098A289 /* MainMenu.xib */,
 				96791A4B1CD582710098A289 /* Info.plist */,
+				96791A511CD5829E0098A289 /* MainWindowController.swift */,
+				96791A521CD5829E0098A289 /* MainWindowController.xib */,
 			);
 			path = ImageTiling;
 			sourceTree = "<group>";
@@ -117,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96791A471CD582710098A289 /* Assets.xcassets in Resources */,
+				96791A541CD5829E0098A289 /* MainWindowController.xib in Resources */,
 				96791A4A1CD582710098A289 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96791A531CD5829E0098A289 /* MainWindowController.swift in Sources */,
 				96791A451CD582710098A289 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
