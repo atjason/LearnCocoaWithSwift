@@ -12,6 +12,7 @@
 		96791A4A1CD582710098A289 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791A481CD582710098A289 /* MainMenu.xib */; };
 		96791A531CD5829E0098A289 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96791A511CD5829E0098A289 /* MainWindowController.swift */; };
 		96791A541CD5829E0098A289 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791A521CD5829E0098A289 /* MainWindowController.xib */; };
+		96791A561CD582F00098A289 /* TiledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96791A551CD582F00098A289 /* TiledImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		96791A4B1CD582710098A289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96791A511CD5829E0098A289 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		96791A521CD5829E0098A289 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		96791A551CD582F00098A289 /* TiledImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiledImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				96791A4B1CD582710098A289 /* Info.plist */,
 				96791A511CD5829E0098A289 /* MainWindowController.swift */,
 				96791A521CD5829E0098A289 /* MainWindowController.xib */,
+				96791A551CD582F00098A289 /* TiledImageView.swift */,
 			);
 			path = ImageTiling;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96791A531CD5829E0098A289 /* MainWindowController.swift in Sources */,
+				96791A561CD582F00098A289 /* TiledImageView.swift in Sources */,
 				96791A451CD582710098A289 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
