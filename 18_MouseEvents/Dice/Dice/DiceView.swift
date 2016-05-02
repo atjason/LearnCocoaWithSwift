@@ -109,7 +109,10 @@ class DiceView: NSView {
   override func mouseDown(theEvent: NSEvent) {
     Swift.print("Mouse down")
     
-    pressed = true
+    let dieFrame = metricsForSize(bounds.size).dieFrame
+    let pointInView = convertPoint(theEvent.locationInWindow, fromView: nil)
+    
+    pressed = dieFrame.contains(pointInView)
   }
   
   override func mouseUp(theEvent: NSEvent) {
