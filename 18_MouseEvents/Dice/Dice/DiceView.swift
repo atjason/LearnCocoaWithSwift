@@ -89,6 +89,12 @@ class DiceView: NSView {
     return (edgeLength, dieFrame)
   }
   
+  // MARK: - Helper
+  
+  func randomize() {
+    intValue = Int(arc4random_uniform(5)) + 1
+  }
+  
   // MARK: - Mouse Events
   
   override func mouseDown(theEvent: NSEvent) {
@@ -97,6 +103,10 @@ class DiceView: NSView {
   
   override func mouseUp(theEvent: NSEvent) {
     Swift.print("Mouse up. Clicked: \(theEvent.clickCount)")
+    
+    if theEvent.clickCount == 2 {
+      randomize()
+    }
   }
   
   override func mouseDragged(theEvent: NSEvent) {
