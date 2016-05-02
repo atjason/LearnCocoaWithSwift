@@ -16,6 +16,12 @@ class DiceView: NSView {
     }
   }
   
+  var pressed: Bool = false {
+    didSet {
+      needsDisplay = true
+    }
+  }
+  
   override func drawRect(dirtyRect: NSRect) {
     NSColor.lightGrayColor().set()
     NSBezierPath.fillRect(bounds)
@@ -32,7 +38,7 @@ class DiceView: NSView {
       
       let shadow = NSShadow()
       shadow.shadowOffset = NSSize(width: 0, height: -1)
-      shadow.shadowBlurRadius = edgeLength / 20.0
+      shadow.shadowBlurRadius = pressed ? edgeLength / 100.0 : edgeLength / 20.0
       shadow.set()
       
       let cornerRadius = edgeLength / 5.0
@@ -84,7 +90,10 @@ class DiceView: NSView {
     
     let padding = edgeLength / 10.0
     let drawingBounds = NSRect(x: 0, y: 0, width: edgeLength, height: edgeLength)
-    let dieFrame = drawingBounds.insetBy(dx: padding, dy: padding)
+    var dieFrame = drawingBounds.insetBy(dx: padding, dy: padding)
+    if pressed {
+      dieFrame = dieFrame.offsetBy(dx: 0, dy: -edgeLength / 40)
+    }
     
     return (edgeLength, dieFrame)
   }
@@ -99,6 +108,8 @@ class DiceView: NSView {
   
   override func mouseDown(theEvent: NSEvent) {
     Swift.print("Mouse down")
+    
+    pressed = true
   }
   
   override func mouseUp(theEvent: NSEvent) {
@@ -107,6 +118,8 @@ class DiceView: NSView {
     if theEvent.clickCount == 2 {
       randomize()
     }
+    
+    pressed = false
   }
   
   override func mouseDragged(theEvent: NSEvent) {
