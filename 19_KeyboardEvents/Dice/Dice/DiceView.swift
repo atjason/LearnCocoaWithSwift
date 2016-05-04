@@ -22,8 +22,15 @@ class DiceView: NSView {
     }
   }
   
+  var highlighted: Bool = false {
+    didSet {
+      needsDisplay = true
+    }
+  }
+  
   override func drawRect(dirtyRect: NSRect) {
-    NSColor.lightGrayColor().set()
+    let backgroundColor = highlighted ? NSColor.grayColor() : NSColor.lightGrayColor()
+    backgroundColor.set()
     NSBezierPath.fillRect(bounds)
     
     drawDieWithSize(bounds.size)
@@ -140,11 +147,11 @@ class DiceView: NSView {
   }
   
   override func mouseEntered(theEvent: NSEvent) {
-    Swift.print("mouseEntered")
+    highlighted = true
   }
   
   override func mouseExited(theEvent: NSEvent) {
-    Swift.print("mouseExited")
+    highlighted = false
   }
   
   // MARK: - First Responder
