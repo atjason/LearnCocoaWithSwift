@@ -10,18 +10,7 @@ import Cocoa
 
 class MainWindowController: NSWindowController {
   
-  @IBOutlet weak var diceA: DiceView!
-  @IBOutlet weak var diceB: DiceView!
-  @IBOutlet weak var diceC: DiceView!
-  
   override var windowNibName: String? {
     return "MainWindowController"
-  }
-  
-  override func windowDidLoad() {
-    // Set tab order
-    diceA.nextKeyView = diceB
-    diceB.nextKeyView = diceC
-    diceC.nextKeyView = diceA
   }
 }

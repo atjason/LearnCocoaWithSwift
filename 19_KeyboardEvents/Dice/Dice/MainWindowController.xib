@@ -7,9 +7,6 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="Dice" customModuleProvider="target">
             <connections>
-                <outlet property="diceA" destination="kft-h1-Ses" id="lAy-yA-aY2"/>
-                <outlet property="diceB" destination="FpL-Ay-A1U" id="eUI-mh-2MY"/>
-                <outlet property="diceC" destination="ynK-aj-ksq" id="QF2-PX-1Oy"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -24,19 +21,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="368" height="144"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kft-h1-Ses" customClass="DiceView" customModule="Dice" customModuleProvider="target">
-                        <rect key="frame" x="20" y="20" width="104" height="104"/>
-                    </customView>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FpL-Ay-A1U" customClass="DiceView" customModule="Dice" customModuleProvider="target">
                         <rect key="frame" x="132" y="20" width="104" height="104"/>
+                        <connections>
+                            <outlet property="nextKeyView" destination="ynK-aj-ksq" id="UBS-zM-Unf"/>
+                        </connections>
                     </customView>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynK-aj-ksq" customClass="DiceView" customModule="Dice" customModuleProvider="target">
                         <rect key="frame" x="244" y="20" width="104" height="104"/>
+                        <connections>
+                            <outlet property="nextKeyView" destination="kft-h1-Ses" id="ChU-5s-sbY"/>
+                        </connections>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kft-h1-Ses" customClass="DiceView" customModule="Dice" customModuleProvider="target">
+                        <rect key="frame" x="20" y="20" width="104" height="104"/>
+                        <connections>
+                            <outlet property="nextKeyView" destination="FpL-Ay-A1U" id="bbf-1W-XgH"/>
+                        </connections>
                     </customView>
                 </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+                <outlet property="initialFirstResponder" destination="kft-h1-Ses" id="8Gi-hW-ZAU"/>
             </connections>
             <point key="canvasLocation" x="255" y="286"/>
         </window>
