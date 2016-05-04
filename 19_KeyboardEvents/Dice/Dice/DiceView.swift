@@ -29,6 +29,16 @@ class DiceView: NSView {
     drawDieWithSize(bounds.size)
   }
   
+  override func viewDidMoveToWindow() {
+    window?.acceptsMouseMovedEvents = true
+    
+    let options: NSTrackingAreaOptions = (NSTrackingAreaOptions.MouseEnteredAndExited)
+      .union(NSTrackingAreaOptions.ActiveAlways)
+      .union(NSTrackingAreaOptions.InVisibleRect)
+    let trackingArea = NSTrackingArea(rect: NSRect(), options: options, owner: self, userInfo: nil)
+    addTrackingArea(trackingArea)
+  }
+  
   func drawDieWithSize(size: NSSize) {
     if let intValue = intValue {
       let (edgeLength, dieFrame) = metricsForSize(size)
@@ -127,6 +137,14 @@ class DiceView: NSView {
   
   override func mouseDragged(theEvent: NSEvent) {
     Swift.print("Mouse dragged. Mouse location: \(theEvent.locationInWindow)")
+  }
+  
+  override func mouseEntered(theEvent: NSEvent) {
+    Swift.print("mouseEntered")
+  }
+  
+  override func mouseExited(theEvent: NSEvent) {
+    Swift.print("mouseExited")
   }
   
   // MARK: - First Responder
