@@ -166,4 +166,12 @@ class DiceView: NSView {
       }
     }
   }
+  
+  override func insertTab(sender: AnyObject?) {
+    window?.selectNextKeyView(sender)
+  }
+  
+  override func insertBacktab(sender: AnyObject?) {
+    window?.selectPreviousKeyView(sender)
+  }
 }
