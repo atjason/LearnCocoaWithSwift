@@ -143,6 +143,14 @@ class DiceView: NSView {
     return true
   }
   
+  override var focusRingMaskBounds: NSRect {
+    return bounds
+  }
+
+  override func drawFocusRingMask() {
+    NSBezierPath.fillRect(bounds)
+  }
+  
   // MARK: - Keyboard Events
   
   override func keyDown(theEvent: NSEvent) {
