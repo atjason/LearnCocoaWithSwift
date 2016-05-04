@@ -128,4 +128,34 @@ class DiceView: NSView {
   override func mouseDragged(theEvent: NSEvent) {
     Swift.print("Mouse dragged. Mouse location: \(theEvent.locationInWindow)")
   }
+  
+  // MARK: - First Responder
+  
+  override var acceptsFirstResponder: Bool {
+    return true
+  }
+  
+  override func becomeFirstResponder() -> Bool {
+    return true
+  }
+  
+  override func resignFirstResponder() -> Bool {
+    return true
+  }
+  
+  // MARK: - Keyboard Events
+  
+  override func keyDown(theEvent: NSEvent) {
+    interpretKeyEvents([theEvent])
+  }
+  
+  override func insertText(insertString: AnyObject) {
+    if let str = insertString as? String {
+      if let num = Int.init(str) {
+        if (1...6).indexOf(num) != nil {
+          intValue = num
+        }
+      }
+    }
+  }
 }
