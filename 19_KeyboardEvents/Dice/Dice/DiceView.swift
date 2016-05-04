@@ -46,6 +46,12 @@ class DiceView: NSView {
     addTrackingArea(trackingArea)
   }
   
+  override func resetCursorRects() {
+    let cursor = NSCursor.pointingHandCursor()
+    addCursorRect(bounds, cursor: cursor)
+    cursor.setOnMouseEntered(true)
+  }
+  
   func drawDieWithSize(size: NSSize) {
     if let intValue = intValue {
       let (edgeLength, dieFrame) = metricsForSize(size)
