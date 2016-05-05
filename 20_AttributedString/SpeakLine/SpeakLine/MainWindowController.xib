@@ -46,7 +46,7 @@
                     <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF9-xn-J4b">
                         <rect key="frame" x="312" y="51" width="128" height="205"/>
                         <clipView key="contentView" ambiguous="YES" id="yp0-b5-hTE">
-                            <rect key="frame" x="1" y="23" width="126" height="181"/>
+                            <rect key="frame" x="1" y="0.0" width="126" height="204"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="jEr-PF-OtJ" viewBased="YES" id="6FZ-In-kfg">
@@ -101,10 +101,10 @@
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="f2j-O8-No6">
-                            <rect key="frame" x="1" y="188" width="99" height="16"/>
+                            <rect key="frame" x="1" y="8" width="0.0" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="oim-kJ-W8D">
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="oim-kJ-W8D">
                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -130,5 +130,6 @@
             </connections>
             <point key="canvasLocation" x="282" y="307"/>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="SR0-y1-2ky"/>
     </objects>
 </document>

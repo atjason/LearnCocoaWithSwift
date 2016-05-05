@@ -28,13 +28,13 @@ class MainWindowController: NSWindowController,
   let voices = NSSpeechSynthesizer.availableVoices()
   
   func updateButtonStatus() {
-    if isSpeaking {
-      speakButton.enabled = false
-      stopButton.enabled = true
-      
-    } else {
-      speakButton.enabled = true
-      stopButton.enabled = false
+    speakButton.enabled = !isSpeaking
+    stopButton.enabled = isSpeaking
+    
+    textField.enabled = !isSpeaking
+    
+    if !isSpeaking {
+      textField.stringValue = textField.stringValue
     }
   }
   
@@ -85,6 +85,18 @@ class MainWindowController: NSWindowController,
   func speechSynthesizer(sender: NSSpeechSynthesizer,
                          didFinishSpeaking finishedSpeaking: Bool) {
     isSpeaking = false
+  }
+  
+  func speechSynthesizer(sender: NSSpeechSynthesizer,
+                         willSpeakWord characterRange: NSRange,
+                                       ofString string: String) {
+    
+    // TODO Optimize using text field's storage
+    let attrStr = textField.attributedStringValue.mutableCopy() as! NSMutableAttributedString
+    
+    attrStr.addAttribute(NSForegroundColorAttributeName, value: NSColor.orangeColor(), range: characterRange)
+    
+    textField.attributedStringValue = attrStr
   }
   
   // MARK: - NSWindowDelegate
