@@ -24,8 +24,8 @@ class MainWindowController: NSWindowController {
                             range: NSRange(0...4))
     
     attrString.addAttribute(NSUnderlineStyleAttributeName,
-                            value: 1,
-                            range: NSMakeRange(6, 4))
+                            value: NSUnderlineStyle.StyleDouble.rawValue,
+                            range: NSMakeRange(6, 5))
     
     attrString.addAttribute(NSForegroundColorAttributeName,
                             value: NSColor.orangeColor(),
