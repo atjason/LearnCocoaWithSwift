@@ -104,6 +104,18 @@ class DiceView: NSView {
           drawDot(0, 0.5) // Mid left/right
           drawDot(1, 0.5)
         }
+      } else {
+        let font = NSFont.systemFontOfSize(edgeLength / 1.5)
+        let color = NSColor.blackColor()
+        let paragraphStyle = NSMutableParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
+        paragraphStyle.alignment = .Center
+        let attrs = [
+          NSFontAttributeName: font,
+          NSForegroundColorAttributeName: color,
+          NSParagraphStyleAttributeName: paragraphStyle,
+        ]
+        let string = String(intValue) as NSString
+        string.drawInRect(bounds, withAttributes: attrs)
       }
     }
   }
@@ -191,7 +203,7 @@ class DiceView: NSView {
   override func insertText(insertString: AnyObject) {
     if let str = insertString as? String {
       if let num = Int.init(str) {
-        if (1...6).indexOf(num) != nil {
+        if (0...9).indexOf(num) != nil {
           intValue = num
         }
       }
