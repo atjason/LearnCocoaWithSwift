@@ -9,6 +9,9 @@
 import Cocoa
 
 class MainWindowController: NSWindowController {
+  
+  @IBOutlet weak var button: NSButton!
+  
   override var windowNibName: String? {
     return "MainWindowController"
   }
