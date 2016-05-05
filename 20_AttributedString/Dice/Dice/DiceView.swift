@@ -107,7 +107,7 @@ class DiceView: NSView {
       } else {
         let font = NSFont.systemFontOfSize(edgeLength / 1.5)
         let color = NSColor.blackColor()
-        let paragraphStyle = NSMutableParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
+        let paragraphStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
         paragraphStyle.alignment = .Center
         let attrs = [
           NSFontAttributeName: font,
@@ -115,7 +115,7 @@ class DiceView: NSView {
           NSParagraphStyleAttributeName: paragraphStyle,
         ]
         let string = String(intValue) as NSString
-        string.drawInRect(bounds, withAttributes: attrs)
+        string.drawCenteredInRect(dieFrame, attrs: attrs)
       }
     }
   }
