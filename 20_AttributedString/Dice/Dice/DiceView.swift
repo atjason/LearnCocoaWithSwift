@@ -133,6 +133,28 @@ class DiceView: NSView {
     return (edgeLength, dieFrame)
   }
   
+  // MARK: - Actions
+  
+  @IBAction func saveAsPDF(sender: AnyObject!) {
+    let savePanel = NSSavePanel()
+    savePanel.allowedFileTypes = ["pdf"]
+    savePanel.beginSheetModalForWindow(window!, completionHandler: {
+      [unowned savePanel] (result) in
+      
+      if result == NSModalResponseOK {
+        let data = self.dataWithPDFInsideRect(self.bounds)
+        
+        do {
+          try data.writeToURL(savePanel.URL!, options: NSDataWritingOptions.DataWritingAtomic)
+          
+        } catch {
+          let alert = NSAlert(error: error as NSError)
+          alert.runModal()
+        }
+      }
+      })
+  }
+  
   // MARK: - Helper
   
   func randomize() {
