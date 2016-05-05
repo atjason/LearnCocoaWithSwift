@@ -15,4 +15,22 @@ class MainWindowController: NSWindowController {
   override var windowNibName: String? {
     return "MainWindowController"
   }
+  
+  override func windowDidLoad() {
+    let attrString = NSMutableAttributedString(string: "Hello World!")
+    
+    attrString.addAttribute(NSFontAttributeName,
+                            value: NSFont.boldSystemFontOfSize(NSFont.systemFontSize()),
+                            range: NSRange(0...4))
+    
+    attrString.addAttribute(NSUnderlineStyleAttributeName,
+                            value: 1,
+                            range: NSMakeRange(6, 4))
+    
+    attrString.addAttribute(NSForegroundColorAttributeName,
+                            value: NSColor.orangeColor(),
+                            range: NSRange(11...11))
+    
+    button.attributedTitle = attrString
+  }
 }
