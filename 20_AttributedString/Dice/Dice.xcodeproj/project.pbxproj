@@ -13,6 +13,7 @@
 		96791A341CD4288C0098A289 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96791A321CD4288C0098A289 /* MainWindowController.swift */; };
 		96791A351CD4288C0098A289 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791A331CD4288C0098A289 /* MainWindowController.xib */; };
 		96791A371CD4291B0098A289 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96791A361CD4291B0098A289 /* DiceView.swift */; };
+		96E295141CDAFA590013C448 /* NSStringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E295131CDAFA590013C448 /* NSStringEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		96791A321CD4288C0098A289 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		96791A331CD4288C0098A289 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		96791A361CD4291B0098A289 /* DiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		96E295131CDAFA590013C448 /* NSStringEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSStringEx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				96791A361CD4291B0098A289 /* DiceView.swift */,
 				96791A321CD4288C0098A289 /* MainWindowController.swift */,
 				96791A331CD4288C0098A289 /* MainWindowController.xib */,
+				96E295131CDAFA590013C448 /* NSStringEx.swift */,
 			);
 			path = Dice;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E295141CDAFA590013C448 /* NSStringEx.swift in Sources */,
 				96791A341CD4288C0098A289 /* MainWindowController.swift in Sources */,
 				96791A371CD4291B0098A289 /* DiceView.swift in Sources */,
 				96791A261CD428740098A289 /* AppDelegate.swift in Sources */,
