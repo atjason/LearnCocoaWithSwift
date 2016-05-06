@@ -207,5 +207,17 @@ class Document: NSDocument {
     // Note: need to remove observers before quit.
     employees = []
   }
+  
+  // MARK: - Menu Item
+  
+  override func validateMenuItem(menuItem: NSMenuItem) -> Bool {
+    switch menuItem.action {
+    case #selector(Document.removeEmployees(_:)):
+      return arrayController != nil ? arrayController!.canRemove : false
+      
+    default:
+      return super.validateMenuItem(menuItem)
+    }
+  }
 }
 
