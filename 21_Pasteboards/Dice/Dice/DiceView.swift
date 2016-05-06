@@ -239,4 +239,36 @@ class DiceView: NSView {
   override func insertBacktab(sender: AnyObject?) {
     window?.selectPreviousKeyView(sender)
   }
+  
+  // MARK: - Pasteboard
+  
+  func writeToPasteboard(pasteboard: NSPasteboard) {
+    if let intValue = intValue {
+      pasteboard.clearContents()
+      pasteboard.writeObjects([String(intValue)])
+    }
+  }
+  
+  func readFromPasteboard(pasteboard: NSPasteboard) -> Bool {
+    if let string = pasteboard.stringForType(NSPasteboardTypeString) {
+      if let int = Int(string) {
+        intValue = int
+        return true
+      }
+    }
+    return false
+  }
+  
+  @IBAction func cut(sender: AnyObject?) {
+    writeToPasteboard(NSPasteboard.generalPasteboard())
+    intValue = nil
+  }
+  
+  @IBAction func copy(sender: AnyObject?) {
+    writeToPasteboard(NSPasteboard.generalPasteboard())
+  }
+  
+  @IBAction func paste(sender: AnyObject?) {
+    readFromPasteboard(NSPasteboard.generalPasteboard())
+  }
 }
