@@ -144,7 +144,7 @@ class Document: NSDocument {
   
   // MARK: - Actions
   
-  @IBAction func removeEmployees(sender: NSButton) {
+  @IBAction func removeEmployees(sender: AnyObject) {
     
     let amount = arrayController?.selectedObjects.count ?? 0
     guard amount > 0 else {
@@ -178,9 +178,7 @@ class Document: NSDocument {
 //      break
 //    }
     
-    let window = sender.window
-    
-    alert.beginSheetModalForWindow(window!, completionHandler: {
+    alert.beginSheetModalForWindow(windowForSheet!, completionHandler: {
       [unowned self] (response) -> Void in
       
       switch response {
