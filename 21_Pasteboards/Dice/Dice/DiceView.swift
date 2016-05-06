@@ -271,4 +271,16 @@ class DiceView: NSView {
   @IBAction func paste(sender: AnyObject?) {
     readFromPasteboard(NSPasteboard.generalPasteboard())
   }
+  
+  // MARK: - Menu Item
+  
+  override func validateMenuItem(menuItem: NSMenuItem) -> Bool {
+    switch menuItem.action {
+    case #selector(DiceView.cut(_:)), #selector(DiceView.copy(_:)):
+      return intValue != nil
+      
+    default:
+      return super.validateMenuItem(menuItem)
+    }
+  }
 }
