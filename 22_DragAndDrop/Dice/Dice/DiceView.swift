@@ -371,9 +371,19 @@ class DiceView: NSView, NSDraggingSource {
   
   // MARK: - NSDraggingDestination
   
+  var dragSourceIntValue: Int?
+  
   override func draggingEntered(sender: NSDraggingInfo) -> NSDragOperation {
-    if let source = sender.draggingSource() as? DiceView where source == self {
-      return .None
+    if let source = sender.draggingSource() as? DiceView {
+      if source == self {
+        return .None
+      } else {
+        // Backup the source's intValue.
+        dragSourceIntValue = source.intValue
+        
+        source.intValue = self.intValue
+        source.highlightForDrag = false
+      }
     }
     
     highlightForDrag = true
@@ -382,8 +392,14 @@ class DiceView: NSView, NSDraggingSource {
   }
   
   override func draggingExited(sender: NSDraggingInfo?) {
-    if let source = sender?.draggingSource() as? DiceView where source != self {
-      highlightForDrag = false
+    if let source = sender?.draggingSource() as? DiceView {
+      if source != self {
+        highlightForDrag = false
+        
+        // Restore the source's intValue.
+        source.intValue = dragSourceIntValue
+        source.highlightForDrag = true
+      }
     }
   }
   
