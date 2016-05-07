@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class DiceView: NSView {
+class DiceView: NSView, NSDraggingSource {
   
   var intValue: Int? = 3 {
     didSet {
@@ -27,6 +27,8 @@ class DiceView: NSView {
       needsDisplay = true
     }
   }
+  
+  var mouseDownEvent: NSEvent?
   
   override func drawRect(dirtyRect: NSRect) {
     let backgroundColor = highlighted ? NSColor.grayColor() : NSColor.lightGrayColor()
@@ -164,7 +166,7 @@ class DiceView: NSView {
   // MARK: - Mouse Events
   
   override func mouseDown(theEvent: NSEvent) {
-    Swift.print("Mouse down")
+    mouseDownEvent = theEvent
     
     let dieFrame = metricsForSize(bounds.size).dieFrame
     let pointInView = convertPoint(theEvent.locationInWindow, fromView: nil)
@@ -183,7 +185,36 @@ class DiceView: NSView {
   }
   
   override func mouseDragged(theEvent: NSEvent) {
-    Swift.print("Mouse dragged. Mouse location: \(theEvent.locationInWindow)")
+    let downPoint = mouseDownEvent!.locationInWindow
+    let dragPoint = theEvent.locationInWindow
+    let distanceDragged = hypot(dragPoint.x - downPoint.x, dragPoint.y - downPoint.y)
+    guard distanceDragged >= 10 else { return }
+    
+    pressed = false
+    
+    if let intValue = intValue {
+      let imageSize = bounds.size
+      let image = NSImage(size: imageSize, flipped: false) { imageBounds in
+        self.drawDieWithSize(imageBounds.size)
+        return true
+      }
+      
+      let draggingFrameOrigin = convertPoint(downPoint, fromView: nil)
+      let draggingFrame = NSRect(origin: draggingFrameOrigin, size: imageSize)
+        .offsetBy(dx: -imageSize.width / 2.0, dy: -imageSize.height / 2.0)
+      
+      let item = NSDraggingItem(pasteboardWriter: String(intValue))
+      item.draggingFrame = draggingFrame
+      item.imageComponentsProvider = {
+        let component = NSDraggingImageComponent(key: NSDraggingImageComponentIconKey)
+        component.contents = image
+        component.frame = NSRect(origin: NSPoint(), size: imageSize)
+        
+        return [component]
+      }
+      
+      beginDraggingSessionWithItems([item], event: mouseDownEvent!, source: self)
+    }
   }
   
   override func mouseEntered(theEvent: NSEvent) {
@@ -282,5 +313,11 @@ class DiceView: NSView {
     default:
       return super.validateMenuItem(menuItem)
     }
+  }
+  
+  // MARK: - NSDraggingSource
+  
+  func draggingSession(session: NSDraggingSession, sourceOperationMaskForDraggingContext context: NSDraggingContext) -> NSDragOperation {
+    return .Copy
   }
 }
