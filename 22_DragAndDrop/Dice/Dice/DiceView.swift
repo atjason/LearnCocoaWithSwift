@@ -190,8 +190,6 @@ class DiceView: NSView, NSDraggingSource {
     let distanceDragged = hypot(dragPoint.x - downPoint.x, dragPoint.y - downPoint.y)
     guard distanceDragged >= 10 else { return }
     
-    pressed = false
-    
     if let intValue = intValue {
       let imageSize = bounds.size
       let image = NSImage(size: imageSize, flipped: false) { imageBounds in
@@ -325,5 +323,7 @@ class DiceView: NSView, NSDraggingSource {
     if operation == .Delete {
       intValue = nil
     }
+    
+    pressed = false
   }
 }
