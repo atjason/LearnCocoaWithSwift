@@ -30,6 +30,22 @@ class DiceView: NSView, NSDraggingSource {
   
   var mouseDownEvent: NSEvent?
   
+  override init(frame frameRect: NSRect) {
+    super.init(frame: frameRect)
+    
+    commonInit()
+  }
+  
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
+    
+    commonInit()
+  }
+  
+  func commonInit() {
+    self.registerForDraggedTypes([NSPasteboardTypeString])
+  }
+  
   override func drawRect(dirtyRect: NSRect) {
     let backgroundColor = highlighted ? NSColor.grayColor() : NSColor.lightGrayColor()
     backgroundColor.set()
