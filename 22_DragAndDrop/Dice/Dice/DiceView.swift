@@ -318,6 +318,12 @@ class DiceView: NSView, NSDraggingSource {
   // MARK: - NSDraggingSource
   
   func draggingSession(session: NSDraggingSession, sourceOperationMaskForDraggingContext context: NSDraggingContext) -> NSDragOperation {
-    return .Copy
+    return NSDragOperation.Copy.union(.Delete)
+  }
+  
+  func draggingSession(session: NSDraggingSession, endedAtPoint screenPoint: NSPoint, operation: NSDragOperation) {
+    if operation == .Delete {
+      intValue = nil
+    }
   }
 }
