@@ -28,6 +28,12 @@ class DiceView: NSView, NSDraggingSource {
     }
   }
   
+  var highlightForDrag: Bool = false {
+    didSet {
+      needsDisplay = true
+    }
+  }
+  
   var mouseDownEvent: NSEvent?
   
   override init(frame frameRect: NSRect) {
@@ -51,7 +57,13 @@ class DiceView: NSView, NSDraggingSource {
     backgroundColor.set()
     NSBezierPath.fillRect(bounds)
     
-    drawDieWithSize(bounds.size)
+    if highlightForDrag {
+      let gradient = NSGradient(startingColor: NSColor.whiteColor(), endingColor: backgroundColor)
+      gradient?.drawInRect(bounds, relativeCenterPosition: NSPoint())
+      
+    } else {
+      drawDieWithSize(bounds.size)
+    }
   }
   
   override func viewDidMoveToWindow() {
@@ -204,7 +216,9 @@ class DiceView: NSView, NSDraggingSource {
     let downPoint = mouseDownEvent!.locationInWindow
     let dragPoint = theEvent.locationInWindow
     let distanceDragged = hypot(dragPoint.x - downPoint.x, dragPoint.y - downPoint.y)
-    guard distanceDragged >= 10 else { return }
+    guard distanceDragged >= 6 else { return }
+    
+    highlightForDrag = true
     
     if let intValue = intValue {
       let imageSize = bounds.size
@@ -341,5 +355,6 @@ class DiceView: NSView, NSDraggingSource {
     }
     
     pressed = false
+    highlightForDrag = false
   }
 }
