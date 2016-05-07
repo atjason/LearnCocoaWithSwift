@@ -218,6 +218,8 @@ class DiceView: NSView, NSDraggingSource {
     let distanceDragged = hypot(dragPoint.x - downPoint.x, dragPoint.y - downPoint.y)
     guard distanceDragged >= 6 else { return }
     
+    highlightForDrag = true
+    
     if let intValue = intValue {
       let imageSize = bounds.size
       let image = NSImage(size: imageSize, flipped: false) { imageBounds in
@@ -380,7 +382,9 @@ class DiceView: NSView, NSDraggingSource {
   }
   
   override func draggingExited(sender: NSDraggingInfo?) {
-    highlightForDrag = false
+    if let source = sender?.draggingSource() as? DiceView where source != self {
+      highlightForDrag = false
+    }
   }
   
   override func prepareForDragOperation(sender: NSDraggingInfo) -> Bool {
