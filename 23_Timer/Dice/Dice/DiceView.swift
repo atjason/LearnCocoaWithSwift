@@ -36,6 +36,8 @@ class DiceView: NSView, NSDraggingSource {
   
   var mouseDownEvent: NSEvent?
   
+  var rollsRemaining = 0
+  
   override init(frame frameRect: NSRect) {
     super.init(frame: frameRect)
     
@@ -191,6 +193,34 @@ class DiceView: NSView, NSDraggingSource {
     intValue = Int(arc4random_uniform(5)) + 1
   }
   
+  func roll() {
+    // Remove the focus status of die.
+    window?.makeFirstResponder(nil)
+    
+    rollsRemaining = 10
+    let timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self,
+      selector: #selector(DiceView.rollTick(_:)), userInfo: nil, repeats: true)
+    
+    timer.tolerance = 0.1
+    timer.fire()
+  }
+  
+  func rollTick(sender: NSTimer) {
+    if rollsRemaining >= 0 {
+      rollsRemaining -= 1
+      
+      // Make sure get a int which is different from current one.
+      let lastIntValue = intValue
+      while lastIntValue == intValue {
+        randomize()
+      }
+      
+    } else {
+      sender.invalidate()
+      window?.makeFirstResponder(self)
+    }
+  }
+  
   // MARK: - Mouse Events
   
   override func mouseDown(theEvent: NSEvent) {
@@ -206,7 +236,7 @@ class DiceView: NSView, NSDraggingSource {
     Swift.print("Mouse up. Clicked: \(theEvent.clickCount)")
     
     if theEvent.clickCount == 2 {
-      randomize()
+      roll()
     }
     
     pressed = false
