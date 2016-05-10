@@ -30,7 +30,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" autosaveColumns="NO" rowSizeStyle="automatic" headerView="K1i-3z-b6j" viewBased="YES" id="p9K-Lv-sd6">
-                                    <rect key="frame" x="0.0" y="0.0" width="238" height="111"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="238" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -154,16 +154,6 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u0T-Bu-DUQ">
-                        <rect key="frame" x="262" y="127" width="89" height="32"/>
-                        <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p3G-aj-bpf">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="add:" target="siO-mu-Jcv" id="bhh-V2-jYi"/>
-                        </connections>
-                    </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jB8-1r-TeL">
                         <rect key="frame" x="262" y="94" width="89" height="32"/>
                         <buttonCell key="cell" type="push" title="Remove" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zwj-hr-lAC">
@@ -176,6 +166,16 @@ CA
                         <connections>
                             <action selector="removeEmployees:" target="-2" id="NTF-ZD-gpO"/>
                             <binding destination="siO-mu-Jcv" name="enabled" keyPath="canRemove" id="rlm-WK-als"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u0T-Bu-DUQ">
+                        <rect key="frame" x="262" y="127" width="89" height="32"/>
+                        <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p3G-aj-bpf">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="add:" target="siO-mu-Jcv" id="bhh-V2-jYi"/>
                         </connections>
                     </button>
                 </subviews>

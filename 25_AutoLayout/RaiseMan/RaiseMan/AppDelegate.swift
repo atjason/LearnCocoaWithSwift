@@ -14,7 +14,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
   func applicationDidFinishLaunching(aNotification: NSNotification) {
-    // Insert code here to initialize your application
+    for window in NSApp.windows {
+      if let contentView = window.contentView {
+        window.visualizeConstraints(contentView.constraints)
+      }
+    }
   }
 
   func applicationWillTerminate(aNotification: NSNotification) {
