@@ -13,6 +13,7 @@
 		96F8C6381CFE55CB00292B43 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F8C6361CFE55CB00292B43 /* MainWindowController.swift */; };
 		96F8C6391CFE55CB00292B43 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F8C6371CFE55CB00292B43 /* MainWindowController.xib */; };
 		96F8C63B1CFE564A00292B43 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F8C63A1CFE564A00292B43 /* Course.swift */; };
+		96F8C63D1CFE56CA00292B43 /* ScheduleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F8C63C1CFE56CA00292B43 /* ScheduleFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		96F8C6361CFE55CB00292B43 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		96F8C6371CFE55CB00292B43 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		96F8C63A1CFE564A00292B43 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		96F8C63C1CFE56CA00292B43 /* ScheduleFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				96F8C63A1CFE564A00292B43 /* Course.swift */,
+				96F8C63C1CFE56CA00292B43 /* ScheduleFetcher.swift */,
 				96F8C6361CFE55CB00292B43 /* MainWindowController.swift */,
 				96F8C6371CFE55CB00292B43 /* MainWindowController.xib */,
 				96F8C6291CFE55B100292B43 /* AppDelegate.swift */,
@@ -140,6 +143,7 @@
 			files = (
 				96F8C63B1CFE564A00292B43 /* Course.swift in Sources */,
 				96F8C6381CFE55CB00292B43 /* MainWindowController.swift in Sources */,
+				96F8C63D1CFE56CA00292B43 /* ScheduleFetcher.swift in Sources */,
 				96F8C62A1CFE55B100292B43 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
