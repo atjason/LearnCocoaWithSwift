@@ -22,7 +22,7 @@ class ScheduleFetcher {
   }
   
   func fetchCourses(completionHandler: (FetchCoursesResult) -> Void) {
-    let url = NSURL(string: "http://bookapi.bignerdranch.com/courses.json")!
+    let url = NSURL(string: "https://bookapi.bignerdranch.com/courses.json")!
     let request = NSURLRequest(URL: url)
     let task = session.dataTaskWithRequest(request) { (data, response, error) in
       var fetchCourseResult: FetchCoursesResult
