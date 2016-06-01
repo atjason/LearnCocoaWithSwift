@@ -9,8 +9,12 @@
 import Cocoa
 
 class MainWindowController: NSWindowController {
+  
   let fetcher = ScheduleFetcher()
   dynamic var courses = [Course]()
+  
+  @IBOutlet weak var tableView: NSTableView!
+  @IBOutlet weak var arrayController: NSArrayController!
   
   override var windowNibName: String? {
     return "MainWindowController"
@@ -29,6 +33,15 @@ class MainWindowController: NSWindowController {
         
         print("Get error: \(error)")
       }
+    }
+    
+    tableView.target = self
+    tableView.doubleAction = #selector(MainWindowController.openCourse(_:))
+  }
+  
+  func openCourse(sender: AnyObject!) {
+    if let course = arrayController.selectedObjects.first as? Course {
+      NSWorkspace.sharedWorkspace().openURL(course.url)
     }
   }
 }

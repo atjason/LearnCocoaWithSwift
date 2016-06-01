@@ -7,6 +7,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="RanchForecast" customModuleProvider="target">
             <connections>
+                <outlet property="arrayController" destination="du6-xz-g5Q" id="Tfa-X0-JV0"/>
+                <outlet property="tableView" destination="R9G-dc-8NR" id="hm4-Ke-WDi"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
