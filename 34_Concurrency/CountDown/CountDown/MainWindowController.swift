@@ -9,7 +9,30 @@
 import Cocoa
 
 class MainWindowController: NSWindowController {
+  
+  dynamic var numString = ""
+  
   override var windowNibName: String? {
     return "MainWindowController"
+  }
+  
+  // MARK: - Action
+  
+  @IBAction func start(sender: NSButton!) {
+    
+  }
+  
+  @IBAction func stop(sender: NSButton!) {
+    
+  }
+  
+  // MARK: - Helper
+  
+  func startCountDown(num: Int) {
+    
+  }
+  
+  func stopCountDown() {
+    
   }
 }
