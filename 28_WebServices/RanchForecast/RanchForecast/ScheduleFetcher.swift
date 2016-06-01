@@ -26,11 +26,21 @@ class ScheduleFetcher {
     let request = NSURLRequest(URL: url)
     let task = session.dataTaskWithRequest(request) { (data, response, error) in
       var fetchCourseResult: FetchCoursesResult
-      if let data = data {
-        fetchCourseResult = self.parseCoursesFrom(data)
+      if data == nil {
+        fetchCourseResult = FetchCoursesResult.Failed(error!)
+        
+      } else if let httpResponse = response as? NSHTTPURLResponse {
+        if httpResponse.statusCode == 200 {
+          fetchCourseResult = self.parseCoursesFrom(data!)
+          
+        } else {
+          fetchCourseResult = FetchCoursesResult.Failed(
+            self.errorWithCode(2, localizedDescription: "Http response status code: \(httpResponse.statusCode)."))
+        }
         
       } else {
-        fetchCourseResult = FetchCoursesResult.Failed(error!)
+        fetchCourseResult = FetchCoursesResult.Failed(
+          self.errorWithCode(1, localizedDescription: "Invalid response."))
       }
       
       NSOperationQueue.mainQueue().addOperationWithBlock {
@@ -41,7 +51,7 @@ class ScheduleFetcher {
   }
   
   func parseCoursesFrom(data: NSData) -> FetchCoursesResult {
-    var error: NSError?
+    var fetchError: NSError?
     do {
       if let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? NSDictionary {
         if let coursesDict = json["courses"] as? [NSDictionary] {
@@ -55,15 +65,15 @@ class ScheduleFetcher {
           
           return FetchCoursesResult.Succeed(courses)
         } else {
-          // TODO init error
+          fetchError = errorWithCode(4, localizedDescription: "Failed to courses dictionary.")
         }
       }
       
-    } catch(let parseError) {
-      // TODO init error
+    } catch {
+      fetchError = errorWithCode(4, localizedDescription: "Failed to generate JSON object.")
     }
     
-    return FetchCoursesResult.Failed(error!)
+    return FetchCoursesResult.Failed(fetchError!)
   }
   
   func parseCourseFrom(dict: NSDictionary) -> Course? {
