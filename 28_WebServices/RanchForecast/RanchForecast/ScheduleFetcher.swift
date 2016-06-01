@@ -43,7 +43,7 @@ class ScheduleFetcher {
   func parseCoursesFrom(data: NSData) -> FetchCoursesResult {
     var error: NSError?
     do {
-      if let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String: AnyObject] {
+      if let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? NSDictionary {
         if let coursesDict = json["courses"] as? [NSDictionary] {
           var courses = [Course]()
           
@@ -78,5 +78,10 @@ class ScheduleFetcher {
       }
     }
     return course
+  }
+  
+  func errorWithCode(code: Int, localizedDescription: String) -> NSError {
+    return NSError(domain: "ScheduleFetcher", code: code,
+                   userInfo: [NSLocalizedDescriptionKey: localizedDescription])
   }
 }
