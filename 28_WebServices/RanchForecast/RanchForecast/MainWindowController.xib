@@ -8,7 +8,9 @@
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="RanchForecast" customModuleProvider="target">
             <connections>
                 <outlet property="arrayController" destination="du6-xz-g5Q" id="Tfa-X0-JV0"/>
+                <outlet property="courseView" destination="oBs-hZ-gAP" id="eUZ-NB-WbT"/>
                 <outlet property="tableView" destination="R9G-dc-8NR" id="hm4-Ke-WDi"/>
+                <outlet property="waitingIndicator" destination="Elr-ua-lyQ" id="DFy-NB-VId"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -141,7 +143,14 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
+                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="Elr-ua-lyQ">
+                        <rect key="frame" x="224" y="119" width="32" height="32"/>
+                    </progressIndicator>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Elr-ua-lyQ" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="4S7-L3-iAX"/>
+                    <constraint firstItem="Elr-ua-lyQ" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="8iW-M5-7QP"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>

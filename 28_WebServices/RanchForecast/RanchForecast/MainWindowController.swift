@@ -13,8 +13,10 @@ class MainWindowController: NSWindowController {
   let fetcher = ScheduleFetcher()
   dynamic var courses = [Course]()
   
+  @IBOutlet weak var courseView: NSScrollView!
   @IBOutlet weak var tableView: NSTableView!
   @IBOutlet weak var arrayController: NSArrayController!
+  @IBOutlet weak var waitingIndicator: NSProgressIndicator!
   
   override var windowNibName: String? {
     return "MainWindowController"
@@ -22,6 +24,9 @@ class MainWindowController: NSWindowController {
   
   override func windowDidLoad() {
     super.windowDidLoad()
+    
+    courseView.hidden = true
+    waitingIndicator.startAnimation(self)
     
     fetcher.fetchCourses { (fetchCourseResult) in
       switch fetchCourseResult {
@@ -33,6 +38,9 @@ class MainWindowController: NSWindowController {
         
         print("Get error: \(error)")
       }
+      
+      self.courseView.hidden = false
+      self.waitingIndicator.stopAnimation(self)
     }
     
     tableView.target = self
