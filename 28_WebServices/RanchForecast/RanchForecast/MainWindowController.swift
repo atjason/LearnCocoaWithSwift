@@ -24,8 +24,6 @@ class MainWindowController: NSWindowController {
       case .Succeed(let courses):
         self.courses = courses
         
-        print("Get courses: \(courses)")
-        
       case .Failed(let error):
         self.courses = []
         
