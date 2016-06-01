@@ -27,8 +27,8 @@ class ScheduleFetcher {
     let task = session.dataTaskWithRequest(request) { (data, response, error) in
       var fetchCourseResult: FetchCoursesResult
       if let data = data {
-        print("Data length: \(data.length)")
-        fetchCourseResult = FetchCoursesResult.Succeed([])
+        fetchCourseResult = self.parseCoursesFrom(data)
+        
       } else {
         fetchCourseResult = FetchCoursesResult.Failed(error!)
       }
@@ -38,5 +38,45 @@ class ScheduleFetcher {
       }
     }
     task.resume()
+  }
+  
+  func parseCoursesFrom(data: NSData) -> FetchCoursesResult {
+    var error: NSError?
+    do {
+      if let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String: AnyObject] {
+        if let coursesDict = json["courses"] as? [NSDictionary] {
+          var courses = [Course]()
+          
+          for dict in coursesDict {
+            if let course = parseCourseFrom(dict) {
+              courses.append(course)
+            }
+          }
+          
+          return FetchCoursesResult.Succeed(courses)
+        } else {
+          // TODO init error
+        }
+      }
+      
+    } catch(let parseError) {
+      // TODO init error
+    }
+    
+    return FetchCoursesResult.Failed(error!)
+  }
+  
+  func parseCourseFrom(dict: NSDictionary) -> Course? {
+    var course: Course?
+    if let title = dict["title"] as? String, urlString = dict["url"] as? String, upcoming = dict["upcoming"] as? [NSDictionary] {
+      if let url = NSURL(string: urlString), startDateString = upcoming.first?["start_date"] as? String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        if let date = dateFormatter.dateFromString(startDateString) {
+          course = Course(title: title, url: url, nextStartDate: date)
+        }
+      }
+    }
+    return course
   }
 }
