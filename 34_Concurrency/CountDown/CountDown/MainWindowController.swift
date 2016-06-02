@@ -11,6 +11,7 @@ import Cocoa
 class MainWindowController: NSWindowController {
   
   dynamic var numString = "5"
+  dynamic var isCountingDown = false
   
   private var countDownQueue = NSOperationQueue()
   
@@ -24,11 +25,13 @@ class MainWindowController: NSWindowController {
     window?.makeFirstResponder(nil)
     if let num = Int(numString) where num > 0 {
       startCountDown(num)
+      isCountingDown = true
     }
   }
   
   @IBAction func stop(sender: NSButton!) {
     stopCountDown()
+    isCountingDown = false
   }
   
   // MARK: - Helper
@@ -46,6 +49,12 @@ class MainWindowController: NSWindowController {
         num -= 1
         NSOperationQueue.mainQueue().addOperationWithBlock({
           self.numString = "\(num)"
+        })
+      }
+      
+      if num == 0 {
+        NSOperationQueue.mainQueue().addOperationWithBlock({
+          self.isCountingDown = false
         })
       }
     }

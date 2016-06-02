@@ -40,6 +40,11 @@
                         </buttonCell>
                         <connections>
                             <action selector="start:" target="-2" id="5tZ-9z-gy0"/>
+                            <binding destination="-2" name="enabled" keyPath="self.isCountingDown" id="yld-1S-pWT">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqX-7a-aE3">
@@ -50,6 +55,7 @@
                         </buttonCell>
                         <connections>
                             <action selector="stop:" target="-2" id="2bv-iD-c0T"/>
+                            <binding destination="-2" name="enabled" keyPath="self.isCountingDown" id="kON-05-Yod"/>
                         </connections>
                     </button>
                 </subviews>
