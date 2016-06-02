@@ -14,6 +14,7 @@ class MainWindowController: NSWindowController {
   dynamic var isCountingDown = false
   
   private var countDownQueue = NSOperationQueue()
+  private var countDownOperation: NSBlockOperation?
   
   override var windowNibName: String? {
     return "MainWindowController"
@@ -38,26 +39,29 @@ class MainWindowController: NSWindowController {
   
   func startCountDown(num: Int) {
     var num = num
-    countDownQueue.addOperationWithBlock {
+    
+    countDownOperation = NSBlockOperation(block: { 
       while num > 0 {
         sleep(1)
-        
-        if self.countDownQueue.operations[0].cancelled {
+
+        if self.countDownOperation!.cancelled {
           break
         }
-        
+
         num -= 1
         NSOperationQueue.mainQueue().addOperationWithBlock({
           self.numString = "\(num)"
         })
       }
-      
+
       if num == 0 {
         NSOperationQueue.mainQueue().addOperationWithBlock({
           self.isCountingDown = false
         })
       }
-    }
+    })
+    
+    countDownQueue.addOperation(countDownOperation!)
   }
   
   func stopCountDown() {
