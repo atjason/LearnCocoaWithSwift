@@ -10,7 +10,7 @@ import Cocoa
 
 class MainWindowController: NSWindowController {
   
-  dynamic var numString = ""
+  dynamic var numString = "5"
   
   private var countDownQueue = NSOperationQueue()
   
@@ -22,24 +22,29 @@ class MainWindowController: NSWindowController {
   
   @IBAction func start(sender: NSButton!) {
     window?.makeFirstResponder(nil)
-    if let num = Int(numString) {
+    if let num = Int(numString) where num > 0 {
       startCountDown(num)
     }
   }
   
   @IBAction func stop(sender: NSButton!) {
-    
+    stopCountDown()
   }
   
   // MARK: - Helper
   
   func startCountDown(num: Int) {
     var num = num
-    countDownQueue.addOperationWithBlock { 
+    countDownQueue.addOperationWithBlock {
       while num > 0 {
         sleep(1)
+        
+        if self.countDownQueue.operations[0].cancelled {
+          break
+        }
+        
         num -= 1
-        NSOperationQueue.mainQueue().addOperationWithBlock({ 
+        NSOperationQueue.mainQueue().addOperationWithBlock({
           self.numString = "\(num)"
         })
       }
@@ -47,6 +52,6 @@ class MainWindowController: NSWindowController {
   }
   
   func stopCountDown() {
-    
+    countDownQueue.cancelAllOperations()
   }
 }
